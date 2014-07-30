@@ -1,0 +1,3163 @@
+\documentclass[oneside,leqno]{book}
+\usepackage{amsmath}%required
+\usepackage{graphicx}%required for illustrations
+\usepackage[german, french]{babel}%recommended
+% requires illustration files fig[j].png, j=1,2,..6
+% If you run into any kind of trouble with these graphics 
+%   please try the version with LaTeX pictures.
+
+\begin{document}
+\thispagestyle{empty}
+\small
+
+
+
+The Project Gutenberg etext of Sechs Vortr\"age, by Henri Poincar\'e
+
+\bigskip
+
+This eBook is for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.net
+
+\bigskip
+
+
+Title: Sechs Vortr\"age über ausgew\"ahlte Gegenst\"ande aus der reinen 
+       Mathematik und mathematischen Physik
+
+\bigskip
+
+Author: Henri Poincar\'e
+
+\bigskip
+
+Release Date: March 5, 2005  [EBook \#15267]
+
+\bigskip
+
+Language: German and French
+
+\bigskip
+
+Character set encoding: TeX
+
+\bigskip
+
+*** START OF PROJECT GUTENBERG'S SECHS VORTR\"AGE ***
+
+\bigskip
+
+
+
+Produced by Joshua Hutchinson, K.F. Creiner and the Online Distributed
+Proofreading Team. This file was produced from images generously made
+available by Cornell University.
+
+
+
+
+
+
+\normalsize
+\newpage
+\selectlanguage{german}
+
+\frontmatter
+\thispagestyle{empty}
+Mathematische Vorlesungen an der Universit\"at G\"ottingen: IV
+
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+\begin{center}
+{\large SECHS VORTR\"AGE \\
+\"UBER AUSGEW\"AHLTE GEGENST\"ANDE \\}
+\bigskip
+
+{\LARGE AUS DER REINEN MATHEMATIK\\
+UND DER MATHEMATISCHEN PHYSIK \\}
+
+\bigskip\bigskip
+\normalsize auf Einladung der Wolfskehl-Kommission \\
+der K\"oniglichen Gesellschaft der Wissenschaften \\
+gehalten zu G\"ottingen vom 22.--28. April 1909 \\
+\bigskip
+
+von\\
+\bigskip
+\Large HENRI POINCAR\'E \\
+\bigskip
+\normalsize Mitglied der Franz\"osischen Akademie \\
+Professor an der Facult\'e des Sciences \\
+der Universit\"at Paris
+
+\bigskip\bigskip\bigskip
+\normalsize Mit 6 in den Text gedruckten Figuren
+\vfill
+{\large
+Leipzig und Berlin \\
+Druck und Verlag von B. G. Teubner \\ \bigskip
+
+1910
+}
+\end{center}
+
+\newpage
+\thispagestyle{empty}
+\mainmatter
+\selectlanguage{french}
+
+\section*{Pr{\'e}face}
+
+L'Universit\'e de G\"ottingen a bien voulu m'inviter \`a traiter
+devant un savant auditoire diverses questions d'Analyse pure, de
+Physique math\'ematique, d'Astrono\-mie th\'eorique et de
+Philosophie math\'ematique; les conf\'erences que j'ai faites
+\`a cette occasion ont \'et\'e recueillies par quelques
+\'etudiants qui ont eu la bont\'e de les r\'ediger en corrigeant
+les nombreuses offenses que j'avais faites \`a la grammaire
+allemande. Je leur en exprime ici toute ma reconnaissance.
+
+Il convient \'egalement que je m'excuse aupr\`es du public de la
+bri\`evet\'e avec laquelle ces sujets sont trait\'es. Je ne
+disposais pour exposer chacun d'eux que d'un temps tr\`es court,
+et je n'ai pu la plupart du temps que donner une id\'ee
+g\'en\'erale des resultats, ainsi que des principes qui m'ont
+guid\'e dans les d\'e\-monstrations, sans entrer dans les
+d\'etails m\^emes de ces d\'emonstrations.
+
+\selectlanguage{german}
+\newpage
+\thispagestyle{empty}
+\setcounter{page}{0}
+\section*{Inhaltsverzeichnis}
+
+
+
+\textbf{Erster Vortrag.}\hfill Seite
+
+\noindent \"Uber die Fredholmschen Gleichungen \hfill \pageref{erster}
+\bigskip
+
+\noindent\textbf{Zweiter Vortrag.}
+
+\noindent Anwendung der Theorie der Integralgleichungen auf die
+Flutbewegung des \\
+Meeres \hfill \pageref{zweiter} \bigskip
+
+\noindent\textbf{Dritter Vortrag.}
+
+\noindent Anwendung der Integralgleichungen auf Hertzsche Wellen \hfill
+\pageref{dritter} \bigskip
+
+\noindent\textbf{Vierter Vortrag.}
+
+\noindent \"Uber die Reduktion der Abelschen Integrale und die Theorie der
+Fuchsschen \\
+Funktionen \hfill \pageref{vierter} \bigskip
+
+\noindent\textbf{F\"unfter Vortrag.}
+
+\noindent \"Uber transfinite Zahlen \hfill \pageref{fuenfter}
+\bigskip
+
+\noindent\textbf{Sechster Vortrag.}
+
+\noindent La m\'ecanique nouvelle \hfill \pageref{sechster}
+\bigskip
+${}$\vfill
+
+\newpage
+
+
+\begin{center}
+\bigskip\bigskip\bigskip\label{erster}
+{\Large Erster Vortrag}
+
+\bigskip\bigskip\bigskip
+{\Large \"UBER DIE FREDHOLMSCHEN GLEICHUNGEN}
+\end{center}
+
+\newpage
+
+
+Die Integralgleichung \label{Integral2Art}
+\[
+\varphi (x)=\lambda \int\limits_a^b f(x,y) \varphi(y) dy + \psi(x) 
+\tag{1}
+\]
+wird bekanntlich aufgel\"ost durch die Integralgleichung
+derselben Art
+\[
+\varphi (x)=\psi(x) + \lambda \int\limits_a^b \psi(y) G(x,y)dy, 
+\tag{1a}
+\]
+wobei
+\[
+G(x,y)=\frac{N(x,y;\lambda \,|\, f)}{D(\lambda \,|\, f)}
+\]
+gesetzt ist. $N$ und $D$ sind, wie aus der
+\textsc{Fredholm}schen Theorie\label{Fredholm1} bekannt ist,
+zwei ganze transzendente Funktionen in bezug auf $\lambda$. Um
+ihre Entwicklung explizite hinschreiben zu k\"onnen, bezeichne
+man, wie \textsc{Fredholm}, mit $f\left(
+\begin{smallmatrix}
+x_1, & x_2, & \ldots & x_n\\
+y_1, & y_2, & \ldots & y_n
+\end{smallmatrix}
+\right)$ diejenige $n$-reihige Determinante,
+deren allgemeines Element $f(x_i,y_k)$ ist. Setzt man dann
+\[
+a_n=\int\limits_a^b \int\limits_a^b \ldots \int\limits_a^b f(
+\begin{smallmatrix}
+x_1, & x_2, & \ldots & x_n\\
+x_1, & x_2, & \ldots & x_n
+\end{smallmatrix}) dx_1 \ldots dx_n,
+\]
+so hat man
+\[
+D(\lambda) = \sum_0^{\infty} \frac{(-\lambda)^n}{n!} a_n.
+\]
+Diese Gleichung formen wir um, indem wir die durch "`Iteration"' aus
+$f(x, y)$ entstehenden Kerne heranziehen. Setzen wir zun\"achst
+\[
+f(x_\alpha,x_\beta)f(x_\beta,x_\gamma)\cdots
+f(x_\lambda,x_\mu)f(x_\mu,x_\alpha) = 
+f(x_\alpha,x_\beta, \cdots x_\lambda, x_\mu),
+\]
+so ist klar, da{\ss} $f(
+\begin{smallmatrix}
+x_1, & x_2, & \ldots & x_n\\
+x_1, & x_2, & \ldots & x_n
+\end{smallmatrix}
+)$ die Form hat
+\[
+\sum \pm \prod f(x_\alpha, \ldots x_\mu),
+\]
+wie sofort aus der Entwicklung der Determinante hervorgeht. Sei nun
+\[
+b_k= \int_a^b \cdots \int_a^b f(x_\alpha, \cdots x_\mu)dx_\alpha 
+\cdots dx_\mu ,
+\]
+wobei $k$ die Anzahl der Integrationsvariabeln $x_\alpha, \ldots
+x_\mu$ bedeutet, so k\"onnen wir offenbar auch setzen
+\[
+b_k=\int\limits_a^b f_k(x,x)dx,
+\]
+wenn unter
+\[
+f_k(x,y)=\int\limits_a^b \dotsi \int\limits_a^b f(x, x_\alpha) 
+f(x_\alpha, x_\beta) \cdots f(x_\lambda, y) dx_\alpha \cdots 
+dx_\lambda
+\]
+der ``$k$-fach iterierte Kern'' verstanden wird.
+\label{itKerne1}
+
+Wir haben den obigen Relationen zufolge jetzt
+\[
+a_n=\sum \pm \prod b_k.
+\]
+
+Beachten wir nun, da{\ss} gewisse unter den in einem Produkt
+$\prod b_k$ enthaltenen $b_k$ einander gleich werden k\"onnen,
+da{\ss} ferner gewisse der Produkte $\prod b_k$ selbst einander
+gleich sein werden, n\"amlich solche, die durch eine Permutation
+der $x_i$ auseinander entstehen, so ergibt eine kombinatorische
+Betrachtung f\"ur $a_n$ einen Ausdruck von der Form
+\[
+a_n=\sum_{a\alpha+b\beta+c\gamma+\ldots=n}
+\frac{n!}{a^\alpha b^\beta c^\gamma \cdots a! b! c! \cdots}
+[(-1)^{\alpha+1}b_\alpha]^a 
+[(-1)^{\beta +1}b_\beta ]^b 
+[(-1)^{\gamma+1}b_\gamma]^c \cdots
+\]
+und also
+\[
+D(\lambda)=\sum_{a,b,c,\ldots} \frac{1}{a!b!c! \cdots}
+\left(-\frac{\lambda^\alpha b_\alpha}{\alpha}\right)^a
+\left(-\frac{\lambda^\beta  b_\beta }{\beta }\right)^b
+\left(-\frac{\lambda^\gamma b_\gamma}{\gamma}\right)^c
+\cdots
+\]
+d.~h.\
+\[
+D(\lambda)=\prod_1^\infty e^{-\frac{\lambda^\alpha b_\alpha}{\alpha}},
+\tag{2}
+\]
+also
+\begin{align*}
+\log D(\lambda) &= -\sum \frac{\lambda^\alpha b_\alpha}{\alpha},
+\tag{2a}
+\\
+\frac{D'(\lambda)}{D(\lambda)} &= -\sum \lambda^{\alpha-1} b_\alpha.
+\tag{2b}
+\end{align*}
+Den Z\"ahler $N(x,y;\lambda)$ der Funktion $G(x, y;\lambda)$
+kann man auf analoge Weise durch die Gleichung
+\[
+N(x,y;\lambda)=D(\lambda) \cdot \sum \lambda^h f_{h+1}(x,y)
+\tag{3}
+\]
+definieren. Diese Gleichungen, welche sich \"ubrigens schon bei
+\textsc{Fredholm} finden, sind n\"utzlich als Ausgangspunkt
+f\"ur viele Betrachtungen, wie sich nun an einigen Beispielen
+zeigen wird.
+
+Die \textsc{Fredholm}sche Methode ist unmittelbar g\"ultig nur
+f\"ur solche Kerne $f(x, y)$, die endlich bleiben. Wird der Kern
+an gewissen Stellen unendlich, \label{unendlKern1} so kann
+dennoch der Fall eintreten, da{\ss} ein iterierter
+Kern,\label{itKerne2} etwa $f_n(x, y)$, endlich bleibt.
+Dann l\"a{\ss}t sich die Integralgleichung mit dem iterierten
+Kerne nach \textsc{Fredholm} behandeln, und \textsc{Fredholm}
+zeigt, da{\ss} die urspr\"ungliche Integralgleichung (1) sich
+auf diese zur\"uckf\"uhren l\"a{\ss}t. Die Aufl\"osung wird
+wieder durch eine Formel der Gestalt (1a) gegeben, nur ist jetzt
+\[
+G=\frac{N_1(x,y;\lambda)}{D_n(\lambda)}
+\]
+zu setzen, wobei
+\[
+D_n(\lambda)=D(\lambda^n\,|\, f_n)
+\]
+und
+\[
+N_1(x, y;\lambda) = D_n(\lambda)\cdot\sum \lambda^h f_{h+1}(x, y)
+\]
+ist. Dabei sind $N_1$ und $D_n$ wieder ganze transzendente
+Funktionen von $\lambda$; jedoch zeigt es sich, da{\ss} sie
+einen gemeinsamen Teiler besitzen;  wir wollen zusehen, wie sich
+dies aus unseren Formeln (2) bis (3) ergibt und wie wir eine
+Bruchdarstellung der meromorphen Funktion $G$ erhalten, bei der
+Nenner und Z\"ahler ganze Funktionen ohne gemeinsamen Teiler
+sind.
+
+Aus unserer Annahme \"uber die iterierten Kerne folgt, da{\ss}
+die Koeffizienten $b_n$, $b_{n+1},\ldots$ endlich sind. Bilden
+wir nun in Anlehnung an Gleichung (2a) die Reihe
+\[
+K(\lambda)=-\lambda^n\frac{b_n}{n}-\lambda^{n+1}\frac{b_{n+1}}{n+1}- 
+\cdots,
+\]
+so wird dieselbe konvergieren. Jetzt setzen wir
+\[
+G(x,y;\lambda)=\frac{e^K \sum \lambda^hf_{h+1}}{e^K}
+\]
+und behaupten, in dieser Formel die gew\"unschte Darstellung zu haben.
+
+Um dies zu beweisen, haben wir zu zeigen, da{\ss} $e^K$ und $e^K
+\cdot \sum \lambda^{h+1}f_{h+1}$ ganze Funktionen sind.
+
+Zu diesem Zwecke bilden wir $\frac{dK}{d\lambda}$. Man berechnet
+leicht
+\[
+-\frac{dK(\lambda)}{d\lambda}=
+\lambda^{n-1}\int\limits_a^b\frac{N_1(x,x)}{D_n(\lambda)}dx+
+\sum\limits_{k=1}^{k=n-1}\lambda^{n+k-1}
+\iint\limits_a^b\frac{N_1(x,y)}{D_n}f_k(x,y)\,dx\,dy.
+\]
+
+Hieraus schlie{\ss}t man zun\"achst, da{\ss} $\frac{dK}{d\lambda}$ 
+eine meromorphe Funktion von $\lambda$ ist; denn sie besitzt
+h\"ochstens Pole in den Nullstellen von $D_n(\lambda)$, d.~h.\
+in den Stellen $\lambda=\alpha \cdot \lambda_i$ wo $\alpha$ eine
+$n$-te Einheitswurzel und $\lambda_i$ ein Eigenwert des Kernes
+$f_n$ ist. Man kann nun zeigen, da{\ss} in diesen m\"oglichen
+Unendlichkeitsstellen das \textsc{Cauchy}sche Residuum von
+$\frac{dK}{d\lambda}$ gleich 1 oder 0 ist, je nachdem $\alpha=1$
+oder $\alpha \neq 1$ genommen wird. Die hierzu geh\"orige
+Rechnung wollen wir jetzt nicht durchf\"uhren;  man benutzt
+dabei den Umstand, da{\ss} das f\"ur $\lambda = \lambda_k$
+genommene Residuum von $\frac{N_1(x,y)}{D_n}$ gleich
+$\varphi_k(x)\psi_k(y)$ ist, wo $\varphi_k$, $\psi_k$, die zu
+$\lambda=\lambda_k$ geh\"origen Eigenfunktionen, den Gleichungen
+\begin{align*} 
+\int\limits_a^b \varphi_k(x) f_p(y,x)dx &=
+\lambda_k^{-p}\varphi_k(y)\\ 
+\int\limits_a^b \psi_k(z) f_p(z,y)dz &= \lambda_k^{-p}\psi_k(y) 
+\end{align*}
+gen\"ugen. Hieraus folgt, da{\ss} $e^{K(\lambda)}$ eine ganze 
+transzendente Funktion ist, die nur an den Stellen $\lambda=\lambda_i$
+verschwindet.
+
+Betrachtet man ebenso den Z\"ahler von $G$, so sieht man
+zun\"achst, da{\ss} er eine meromorphe Funktion von $\lambda$
+wird, die h\"ochstens an den Stellen $\lambda = \alpha\lambda_i$
+unendlich werden kann. Die Betrachtung der Residuen zeigt
+jedoch, da{\ss} dies nicht geschieht, und somit, da{\ss} der
+Z\"ahler $e^K \sum\lambda^h f_{k+1}$ ebenfalls eine ganze
+transzendente Funktion ist. Damit ist die Reduktion des
+\textsc{Fredholm}schen Bruches geleistet.
+
+Die Reihenentwicklung f\"ur Z\"ahler und Nenner des
+\textsc{Fredholm}schen Bruches in dieser reduzierten Gestalt
+erhalten wir, indem wir auf die Bildungsweise von $K(\lambda)$
+zur\"uckgehen; setzen wir den Nenner
+\[
+e^{K(\lambda)}=\sum(-\lambda)^n \frac{a'_n}{n!},
+\]
+so haben wir
+\[
+a'_n=\sum_{a\alpha+b\beta+c\gamma+\cdots=n}\pm b_\alpha^a \, 
+b_\beta^b \,
+b_\gamma^c\,\cdots,
+\]
+wobei zu setzen ist 
+\[
+\begin{array}[t]{ll}
+  b_\alpha = 0 & \text{ f\"ur } \alpha<n \text{ und }\\
+  b_\alpha=\int\limits_a^b f_\alpha(x,x)dx \quad & 
+    \text{ f\"ur } \alpha \geq n.
+\end{array}
+\]
+In analoger Weise wird der Z\"ahler gebildet. Man mu{\ss} also
+die Determinanten in der gew\"ohnlichen Weise entwickeln, aber
+diejenigen Glieder dieser Entwicklung wegwerfen, welche einen
+Faktor von der Form $f(x_1,x_2,\ldots x_k)$ mit weniger als $n$
+Ver\"anderlichen enthalten.
+
+Unsere Formeln (2), (2a), (3) sind auch in dem Falle von Nutzen,
+da{\ss} au{\ss}er dem Kern $f(x, y)$ auch alle iterierten Kerne
+unendlich werden und die \textsc{Fredholm}sche Methode also nun
+sicher versagt.\\ Seien etwa die Zahlen $b_1, b_2, \ldots
+b_{n-1}$ unendlich, $b_n, b_{n+1}, \ldots$ endlich. Man kann
+dann jedenfalls die Reihe $K(\lambda)$ bilden, fragen, ob sie
+konvergiert, und untersuchen, ob $e^{K(\lambda)}$ wieder eine
+ganze Funktion darstellt. Unter der Voraussetzung, da{\ss} $f(x,y)$ 
+ein symmetrischer Kern ist, d.~h.
+\[
+f(x, y) = f(x, y), 
+\]
+ist mir dieser Nachweis gelungen. Ich benutze dabei die Relationen
+\[
+b_n = \sum \lambda_i^{-n}, 
+\]
+die f\"ur $n > 2$ gelten m\"ussen, da das Geschlecht der
+Funktion $D(\lambda)$ einem \textsc{Hadamard}schen Satze
+zufolge kleiner als 2 ist.\label{Hadamard}
+
+Den Beweis mitzuteilen fehlt jetzt die Zeit.
+
+F\"ur den Z\"ahler des \textsc{Fredholm}schen Bruches habe ich
+die Betrachtung nicht durchgef\"uhrt.
+
+Noch einige Worte \"uber die \label{Integral1Art}
+Integralgleichung 1.~Art! Auf gewisse derartige Integralgleichungen kann man, wenn man sie zuvor auf Integralgleichungen der 2.~Art 
+zur\"uckf\"uhrt, die \textsc{Fredholm}sche Methode direkt anwenden. 
+Es liege z.~B.\ die Gleichung
+\[
+\int\limits_{-\infty}^{+\infty} \varphi(y)[e^{ixy} 
+ + \lambda f(x,y)] dy = \psi(x) \qquad (-\infty <  x < +\infty)
+\tag{1}
+\]
+vor, in der $\psi(x)$ die gegebene, $\varphi(x)$ aber die
+gesuchte Funktion ist, w\"ahrend der Bestandteil $f(x, y)$ des
+Kerns eine gegebene Funktion ist, die gewissen, weiter unten
+angegebenen beschr\"ankenden Voraussetzungen unterworfen ist.
+F\"ur die gesuchte Funktion $\varphi(y)$ machen wir den Ansatz
+\[ 
+\varphi(y) = \int\limits_{-\infty}^{+\infty} \Phi(z) e^{-izy} dz,  
+\]
+aus dem nach dem \textsc{Fourier}schen Integraltheorem,
+\label{FourierIntegral} falls $\Phi(x)$ die Bedingungen f\"ur
+dessen G\"ultigkeit erf\"ullt, umgekehrt
+\[
+2\pi \Phi(x) = \int\limits_{-\infty}^{+\infty} \varphi(y) e^{ixy} dy 
+\]
+folgt. Danach verwandelt sich (1) in
+\[
+ 2\pi \Phi(x) + \lambda \int\limits_{-\infty}^{+\infty} 
+\int\limits_{-\infty}^{+\infty} \Phi(z) f(x,y) e^{-izy} dz\, 
+dy = \psi(x) 
+\]
+oder
+\[
+2\pi \Phi(x) + \lambda \int\limits_{-\infty}^{+\infty} 
+\Phi(z) K(x,z) dz = \psi(x), 
+\]
+wenn
+\[
+K(x, z) = \int\limits_{-\infty}^{+\infty} f(x, y) e^{-izy} dy \tag{2}
+\]
+gesetzt wird, und damit sind wir bereits bei einer
+Integralgleichung 2.~Art angelangt. Der Kern~(2) gestattet die
+Anwendung der \textsc{Fredholm}schen Methode z.~B.\ dann, wenn
+$f(x, y)$ und $\frac{\partial f(x,y)}{\partial y}$
+gleichm\"a{\ss}ig in $x$ f\"ur $y = \pm\infty$ gegen $0$
+konvergieren und die Ungleichung
+\[
+\frac{\partial^2 f}{\partial y^2} < \frac{M}{1 + y^2}
+\]
+statthat, in der $M$ eine von $x$ und $y$ unabh\"angige
+Konstante bedeutet. Von $\psi(x)$ gen\"ugt es etwa, anzunehmen,
+da{\ss} es nur endlichviele Maxima und Minima besitzt und im
+Intervall $-\infty \cdots +\infty$ absolut integrierbar ist.
+
+Wir k\"onnen dieselbe Methode auf eine Reihe
+\[
+\psi(x) = \sum_{(m)} A_m\left[ e^{imx} + \lambda\theta_m(x)
+\right]
+\]
+anwenden; das Problem ist hier also, wenn $\psi(x)$ und die
+Funktionen $\theta_m(x)$ gegeben sind, die Koeffizienten $A_m$
+so zu berechnen, da{\ss} die hingeschriebene Entwicklung
+g\"ultig ist. Handelte es sich soeben um eine Erweiterung des
+\textit{Fourierschen Integraltheorems}, so haben wir es jetzt
+mit einer Verallgemeinerung der \textit{Fourierschen Reihe} 
+\label{FourierReihe} zu tun.
+
+Setzen wir $\varphi(z)$ in der Form
+\[
+\varphi(z) = \sum_{(m)} A_m e^{imz};
+\quad 2\pi A_m = \int\limits_0^{2\pi} \varphi(z) e^{-imz} dz
+\]
+an, so bekommen wir
+\[
+\psi(x) = \varphi(x) + \frac{\lambda}{2\pi} \int\limits_0^{2\pi} 
+ \varphi(z) \cdot \sum_{(m)} e^{-imz} \theta_m(x) \cdot dz.
+\]
+Von der Reihe, welche hier als Kern fungiert, m\"ussen wir
+voraussetzen, da{\ss} sie absolut und gleichm\"a{\ss}ig
+konvergiert, d.~h.\ wir m\"ussen annehmen, da{\ss}
+\[
+\sum_{(m)} \left\lvert \theta_m(x) \right\rvert \tag{3}
+\]
+gleichm\"a{\ss}ig konvergiert.
+
+Setzen wir beispielsweise
+\[
+\lambda = 1,\quad \theta_m(x) = e^{i\mu_m x} - e^{imx},
+\]
+so erhalten wir eine Entwicklung der Form
+\[
+\psi(x) = \sum_{(m)} A_m e^{i\mu_m x}.
+\]
+Die Bedingung (3) ist erf\"ullt, wenn wir die absolute Konvergenz von
+\[
+\sum_{(m)} (\mu_m - m) 
+\]
+voraussetzen.
+
+Endlich betrachten wir noch die Gleichung
+\[
+\int\limits_0^{2\pi} \varphi(y) [e^{ixy} + \lambda f(x, y)]dy = \psi(x), \quad (-\infty < x < +\infty)
+\tag{4}
+\]
+welche sich von (1) dadurch unterscheidet, da{\ss} das Integral
+nicht in unendlichen, sondern in endlichen Grenzen zu nehmen
+ist. In diesem Fall darf $\psi(x)$ nicht willk\"urlich gew\"ahlt
+werden: es mu{\ss}, falls $f(x, y)$ holomorph ist, sicher eine
+ganze transzendente Funktion sein, wenn die Gleichung~(4) eine
+Aufl\"osung besitzen soll. Dagegen d\"urfen die Werte~$\psi(m)$
+dieser Funktion~$\psi$ f\"ur alle ganzen Zahlen $m$ im
+wesentlichen willk\"urlich angenommen werden. Setze ich
+n\"amlich
+\[
+\varphi(z) = \sum_{(m)} A_m e^{-imz}, \quad\text{wo}\quad 
+2\pi A_m = \int_0^{2\pi} \varphi(y) e^{imy} dy \quad\text{ ist,}
+\]
+so verwandelt sich (4), f\"ur $x = m$ genommen, in
+\[
+2\pi A_m + \lambda  \sum_{(p)} A_p \int\limits_0^{2\pi} 
+ e^{-ipy} f(m, y) dy = \psi(m). 
+\]
+Wir gelangen so zu einem System unendlich vieler linearer
+Gleichungen mit unendlich vielen Unbekannten, \label{linGl} wie
+sie von \textsc{Hill}, H. v. \textsc{Koch}, \textsc{Hilbert}
+\label{Hill}\label{Koch}\label{Hilbert1}u.~a.\ untersucht
+worden sind. Die L\"osung dieses Systems ist, falls wir f\"ur
+die Reihe
+\[
+ \sum_{(p, m)} \int\limits_0^{2\pi} e^{-ipy} f(m, y) dy
+\tag{5}
+\]
+die Voraussetzung absoluter und gleichm\"a{\ss}iger Konvergenz
+machen, der \textsc{Fredholm}schen L\"osung der Integralgleichungen
+durchaus analog und stellt sich wie diese als meromorphe
+Funktion des Parameters~$\lambda$ dar. Die gleichm\"a{\ss}ige
+und absolute Konvergenz von (5) ist aber, wie sich durch
+partielle Integration ergibt, sichergestellt, falls die Summe
+\[
+\sum_{(m)} f''(m, z)
+\]
+oder das Integral
+\[
+\int\limits_{-\infty}^{+\infty} f''(x, z) dx
+\]
+absolut und gleichm\"a{\ss}ig konvergiert.
+
+Man sieht die \"Ahnlichkeit und den Unterschied der beiden
+F\"alle (1) und (4) deutlich: je nachdem die Integrationsgrenzen
+unendlich oder endlich sind --- oder auch, je nachdem der Kern
+in den Integrationsgrenzen keine oder eine gen\"ugend hohe
+Singularit\"at aufweist ---, darf man die ``gegebene'' Funktion
+im wesentlichen willk\"urlich w\"ahlen oder ihr nur eine zwar
+unendliche, jedoch \textit{diskrete} Reihe von Funktionswerten
+vorschreiben. Es w\"are wohl nicht ohne Interesse, den hier zur
+Geltung kommenden Unterschied mit Hilfe der Iteration der Kerne
+n\"aher zu betrachten.
+
+\newpage
+
+
+\begin{center}
+\bigskip\bigskip\bigskip\label{zweiter}\setcounter{equation}{0}
+{\Large Zweiter Vortrag}
+
+\bigskip\bigskip\bigskip\bigskip
+{\Large ANWENDUNG
+\bigskip
+
+DER THEORIE DER INTEGRALGLEICHUNGEN 
+\bigskip
+
+AUF DIE FLUTBEWEGUNG DES MEERES}
+\end{center}
+
+\newpage
+
+
+Ich will heute \"uber einige Anwendungen der
+Integralgleichungstheorie auf die Flutbewegung berichten, die
+ich im letzten Semester gelegentlich einer Vorlesung \"uber
+diese Erscheinung gemacht habe. \label{Flutproblem}
+
+Die Differentialgleichungen des Problems sind die folgenden:
+\begin{equation}
+\left\{
+\begin{array}{l l}
+\mbox{a) }&
+k^2 \sum\frac{\partial}{\partial x} \left( h_1 
+\frac{\partial \varphi}{\partial x}
+\right) + k^2 \left( 
+\frac{\partial \varphi}{\partial x}\frac{\partial h_2}{\partial y} 
+- \frac{\partial \varphi}{\partial y}
+\frac{\partial h_2}{\partial x}\right) = \zeta, \\
+\mbox{b) }&
+g \cdot \zeta = - \lambda^2 \varphi + \mathit{\Pi} + W.
+\end{array}\right.
+\end{equation}
+
+Wir stellen uns dabei vor, da{\ss} die Kugeloberfl\"ache der
+Erde etwa durch stereographische Projektion konform auf die
+$(x,y)$-Ebene bezogen sei; dann bedeute $k(x,y)$ das
+\"Ahnlichkeitsverh\"altnis der Abbildung zwischen Ebene und
+Kugel. Die L\"osung des Flutproblems denken wir uns durch
+periodische Funktionen der Zeit $t$ gegeben, und wir nehmen
+speziell an, da{\ss} unsere Gleichungen (1) einem einzigen
+periodischen Summanden von der Form $A \cos (\lambda t+ \alpha)$
+entsprechen, soda{\ss} also $\lambda$ in unseren Gleichungen die
+Schwingungsperiode bestimmt; es ist bequem, statt des Kosinus
+komplexe Exponentialgr\"o{\ss}en einzuf\"uhren und also etwa
+anzunehmen, da{\ss} alle unsere Funktionen die Form
+\[
+e^{i\lambda t} \cdot f(x,y)
+\]
+haben; der reelle und imagin\"are Teil dieser komplexen
+L\"osungen stellt uns dann die physikalisch brauchbaren
+L\"osungen dar.
+
+$\varphi(x, y)$ ist definiert durch
+\[
+-\lambda^2 \varphi = V-p,
+\]
+wo $V$ das hydrostatische Potential,\label{hydroPot} $p$ der
+Druck ist.
+
+Ist $h$ die Tiefe des Meeres, so definieren wir
+\begin{align*}
+h_1 &= - \frac{ h\lambda^2}{-\lambda^2 + 4\omega^2 \cos^2\vartheta},
+\\
+h_2 &= - \frac{2\omega i\cos\vartheta}{\lambda} h_1, \qquad(i 
+= \sqrt{-1})
+\end{align*}
+wo $\vartheta$ die Colatitude\label{Colatitude} des zu $(x,y)$
+geh\"origen Punktes der Erde, $\omega$ die Winkelgeschwindigkeit
+der Erde bedeutet. $\zeta(x, y)$ ist die Differenz zwischen der
+Dicke der mittleren und der gest\"orten Wasserschicht, d.\,h.\
+$\zeta > 0$ entspricht der Ebbe, $\zeta < 0$ der Flut.
+$g$ ist die Beschleunigung der Schwerkraft, $W$ das Potential
+der St\"orungskr\"afte, $\mathit{\Pi}$ ist das Potential,
+welches von der Anziehung der Wassermassen von der Dicke $\zeta$
+herr\"uhrt. Ist z.~B.
+\begin{align*}
+  \zeta &= \sum A_n X_n,\\
+  \intertext{so wird}
+  \mathit{\Pi} &= \sum \frac{4\pi A_n}{2n+1} X_n,
+\end{align*}
+wo die $X_n$ die Kugelfunktionen sind.
+
+Die Einheiten sind so gew\"ahlt, da{\ss} die Dichte des Wassers
+gleich $1$, der Radius der Erdkugel gleich $1$ ist.
+
+Die Gr\"o{\ss}e $\mathit{\Pi}$ kann man meistens
+vernachl\"assigen; tut man dies, so erh\"alt man sofort f\"ur
+$\varphi$ eine partielle Differentialgleichung 2.\ Ordnung. Um
+aus derselben $\varphi$ zu bestimmen, mu{\ss} man gewisse
+Grenzbedingungen vorschreiben. Wir unterscheiden da zwei
+F\"alle:
+
+1.\ Der Rand des Meeres ist eine vertikale Mauer; dann wird
+\[
+  \frac{\partial\varphi}{\partial n}
+  + \frac{2\omega i}{\lambda} \cos\vartheta
+  \cdot \frac{\partial\varphi}{\partial s} = 0,
+\] 
+wobei $\frac{\partial\varphi}{\partial n}$,
+$\frac{\partial\varphi}{\partial s}$ die normale bzw.\
+tangentiale Ableitung von $\varphi$ ist.
+
+2.\ Der Rand des Meeres ist nicht vertikal; dann ist dort
+\[
+  h = 0,\quad \text{also} \quad h_1 = h_2 = 0.
+\]
+Die Grenzbedingung lautet hier, da{\ss} $\varphi$ am Rande
+regul\"ar und endlich bleiben soll.
+
+Um auf diese Probleme die Methoden der Integralgleichungen
+anwenden zu k\"onnen, erinnern wir uns zun\"achst der
+allgemeinen \"Uberlegungen, wie sie \textsc{Hilbert}
+\label{Hilbert2} und \textsc{Picard}\label{Picard} f\"ur 
+Differentialgleichungen anstellen. Sei
+\[
+  D(u) = f(x,y)
+\]
+eine partielle Differentialgleichung 2.\ Ordnung f\"ur $u$, die
+elliptischen Typus hat, so ist eine, gewisse Grenzbedingungen
+erf\"ullende, L\"osung $u$ darstellbar in der Form
+\[
+  u = \int f'G \:d\sigma',
+\]
+wobei $G(x,y;x',y')$ die zu diesen Randbedingungen geh\"orige
+\textsc{Green}sche Funktion\label{Green} des 
+Differentialausdruckes $D(u)$ ist; $f'$ ist $f(x',y')$, $d\sigma'
+= dx' \cdot dy'$, und das Integral ist \"uber dasjenige Gebiet
+der $(x',y')$-Ebene zu erstrecken, f\"ur welches die
+Randwertaufgabe gestellt ist. Um die \textsc{Green}sche
+Funktion zu berechnen und so die Randwertaufgabe zu l\"osen,
+setze man
+\[
+  D(u) = D_0(u) + D_1(u),
+\]
+wo
+\[
+  D_1(u) = a\frac{\partial u}{\partial x}
+  + b\frac{\partial u}{\partial y} + cu
+\]
+ein linearer Differentialausdruck ist. Nehmen wir nun an, wir
+kennen die \textsc{Green}\-sche Funktion $G_0$ von $D_0(u)$, so
+haben wir die L\"osung von
+\[
+D(\varphi) = f
+\]
+in der Form
+\[
+\varphi = \int G_0 \left( f' - a'\frac{\partial\varphi'}{\partial x'} - b'\frac{\partial\varphi'}{\partial y'} 
+- c'\varphi' \right) d\sigma' .
+\]
+Schaffen wir hieraus durch partielle Integrationen die
+Ableitungen $\frac{\partial\varphi'}{\partial x'}$,
+$\frac{\partial\varphi'}{\partial y'}$ heraus, so werden wir
+direkt auf eine Integralgleichung zweiter Art f\"ur $\varphi$
+gef\"uhrt, die wir nach der \textsc{Fredholm}schen Methode
+\label{Fredholm2} behandeln k\"onnen, wenn ihr Kern nicht zu
+stark singul\"ar wird.
+
+Bei unserem Probleme der Flutbewegung tritt nun gerade dieser
+Fall ein; der Kern wird so hoch unendlich, \label{unendlKern2}
+da{\ss} die \textsc{Fredholm}schen Methoden versagen; ich will
+Ihnen jedoch zeigen, in welcher Weise man diese Schwierigkeiten
+\"uberwinden kann.
+
+Betrachten wir erst den Fall der ersten Grenzbedingung
+\[
+\frac{\partial\varphi}{\partial n} + 
+C\frac{\partial\varphi}{\partial s} = 0,
+\]
+wo $C$ eine gegebene Funktion von $x, y$ ist. Die
+Differentialgleichung, die sich bei Vernachl\"assigung von
+$\mathit{\Pi}$ ergibt, hat die Form
+\[
+A\Delta\varphi + D_1 = f,
+\]
+und wir stehen daher vor der Aufgabe, die Gleichung
+\[
+\Delta\varphi = F
+\]
+mit unserer Randbedingung zu integrieren.
+
+Diese Aufgabe ist \"aquivalent mit der, eine im Innern der
+Randkurve regul\"are Potentialfunktion $V$, die am Rande die
+Bedingung $\frac{\partial V}{\partial n} + C\frac{\partial
+V}{\partial s} = 0$ erf\"ullt, als Potential einer einfachen
+Randbelegung zu finden. Bezeichnet $s$ die Bogenl\"ange auf der
+Randkurve von einem festen Anfangspunkte bis zu einem
+Punkte~$P$, $s'$~die bis zum Punkte $P'$, so erh\"alt man f\"ur
+$V$ eine Integralgleichung; jedoch wird der Kern $K(s,s')$
+derselben f\"ur $s = s'$ von der ersten Ordnung unendlich, und
+es ist daher in dem Integrale
+\[
+\int_A^B K(x,y) f(y) dy
+\]
+der sogenannte \textsc{Cauchy}sche Hauptwert zu nehmen, der
+definiert ist als das arithmetische Mittel aus den beiden
+Werten, die das Integral erh\"alt, wenn ich es in der komplexen
+$y$-Ebene unter Umgehung des Punktes $y = x$ das eine mal auf
+einem Wege $AMB$ oberhalb, das andere mal auf einem Wege $AM'B$
+unterhalb der reellen Achse f\"uhre.
+
+Anstatt die Methoden zu benutzen, die \textsc{Kellogg}
+\label{Kellog} zur Behandlung solcher unstetiger Kerne angibt,
+will ich einen andern Weg einschlagen. Wir betrachten neben der
+Operation
+\[
+S\big(f(x)\big) = \int K(x,y)f(y)dy
+\]
+die iterierte
+\[
+S^2\big(f(x)\big) = \iint K(x,z)K(z,y)f(y)dz\,dy,
+\]
+bei der ebenfalls das Doppelintegral als \textsc{Cauchy}scher
+Hauptwert zu nehmen ist; dies soll folgenderma{\ss}en verstanden
+werden: wir betrachten f\"ur die Variable $z$ die Wege $AMB$,
+$AM'B$, f\"ur $y$ die Wege $APB$, $AP'B$, die zueinander liegen
+m\"ogen, wie in der Figur angedeutet ist. Dann bilden wir die 4
+Integrale, die sich ergeben, wenn ich einen Weg f\"ur $z$ mit
+einem f\"ur $y$ kombiniere;
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics*[scale=0.3,keepaspectratio]{fig1.png}
+\end{center}
+\end{figure}
+
+\begin{tabular}{lrrrr}
+$z:$ &$AMB$, &$AM'B$, &$AMB$, &$AM'B$ \\
+$y:$ &$APB$, &$APB$,  &$AP'B$, &$AP'B$, \\
+\end{tabular}
+
+\noindent und nehmen aus diesen 4 Integralen das arithmetische
+Mittel. Ziehen wir noch 2 Wege $AQB$, $AQ'B$ wie in der Figur,
+so sehen wir, da{\ss} sich in der ersten Wegkombination der Weg
+$AMB$ f\"ur $z$ ersetzen l\"a{\ss}t durch $AQB + AMBQA$, in der
+zweiten $AM'B$ durch $AQ'B$, in der dritten $AMB$ durch $AQB$
+und in der vierten $AM'B$ durch $AQ'B + AM'BQ'A$, soda{\ss} wir
+jetzt die folgenden Wegkombinationen haben:
+
+\begin{tabular}{lll}
+{\centering $z$} & \quad & {\centering $y$}  \\
+$AQB + AMBQA$      &       & $APB$ \\
+$AQ'B$             &       & $APB$ \\
+$AQB$              &       & $AP'B$ \\
+$AQ'B + AM'BQ'A$   &       & $AP'B$.
+\end{tabular}
+
+F\"uhren wir jetzt die Integrale aus und wenden den
+Residuenkalk\"ul auf die geschlossenen Wege an, so zeigt sich,
+da{\ss} unsere Operation $S^2\big(f(x)\big)$, die einer
+Integralgleichung 1.~Art zugeh\"ort, \"ubergeht in eine
+Operation, welche durch die linke Seite einer Integralgleichung
+2.~Art gegeben ist, deren Kern \"uberall endlich bleibt; wenn
+wir zuerst die vier Kombinationen von den Wegen $AQB$ und $AQ'B$
+mit den Wegen $APB$ und $AP'B$ nehmen, so bekommen wir ein
+doppeltes Integral, welches nicht unendlich werden kann, da auf
+diesen Wegen $x \ne y$ und $y \ne z$. Betrachten wir jetzt die
+beiden Wegkombinationen $AMBQA$, $APB$ und $AM'BQ'A$, $AP'B$,
+oder $AMBQA$, $APB$ und $AQ'BM'A, BP'A$, so ist leicht zu sehen,
+da{\ss} $z$ eine geschlossene Kurve $AMBQA$ oder $AQ'BM'A$ um
+$y$ beschreibt, und da{\ss} gleichzeitig $y$ eine geschlossene
+Kurve $APBP'A$ um $x$ beschreibt. Wir d\"urfen also die
+Residuenmethode anwenden, und wir bekommen ein Glied, wo die
+unbekannte Funktion ohne Integralzeichen auftritt, wie in der
+linken Seite einer Integralgleichung zweiter Art. Indem wir so
+auf eine durchaus regul\"are Integralgleichung 2.\ Art gef\"uhrt
+werden, die der \textsc{Fredholm}schen Methode zug\"anglich ist,
+haben wir die Schwierigkeit bei unserem Problem \"uberwunden.
+
+Nur ein Punkt bedarf noch der Erl\"auterung: wenn $x$ und $y$
+gleichzeitig in einen der Endpunkte $A, B$ des Intervalles
+hineinfallen, so versagen zun\"achst die obigen Betrachtungen,
+und es scheint, als w\"aren wir f\"ur diese Stellen der
+Endlichkeit unseres durch Iteration gewonnenen Kernes nicht
+sicher. Dieses Bedenken wird jedoch bei unserm Problem dadurch
+beseitigt, da{\ss} der Rand des Meeres, der das
+Integrationsintervall darstellt, geschlossen ist, woraus sich
+ergibt, da{\ss} die Punkte $A, B$ keine Ausnahmestellung
+einnehmen k\"onnen.
+
+Durch diese \"Uberlegungen ist also der Fall der vertikalen
+Meeresufer erledigt.
+
+Wir betrachten den zweiten und schwierigeren Fall, da{\ss} das
+Ufer des Meeres keine vertikale Mauer ist. Dann ist am Rande
+\[
+h = h_1 = h_2 = 0.
+\]
+Da die Glieder 2.\ Ordnung unserer Differentialgleichung f\"ur
+$\varphi$ durch den Ausdruck
+\[
+h_1\Delta\varphi
+\]
+gegeben sind, so ist die Randkurve jetzt eine singul\"are Linie
+f\"ur die Differentialgleichung. Au{\ss}erdem werden $h_1, h_2$
+gem\"a{\ss} ihrer Definition f\"ur die durch die Gleichung
+\[
+4\omega^2\cos^2\vartheta = \lambda^2
+\]
+gegebene \textit{kritische geographische Breite}
+\label{kritischegeographische} $\vartheta$ unendlich. Um trotz
+dieser Singularit\"aten, welche das Unendlichwerden des Kerns
+$K$ zur Folge haben, das Problem durchzuf\"uhren, bin ich
+gezwungen gewesen, das reelle Integrationsgebiet durch ein
+komplexes zu ersetzen, indem ich $y$ in eine komplexe
+Ver\"anderliche $y + iz$ verwandle; $x$ hingegen bleibt reell.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics*[scale=0.4]{fig2.png}
+\end{center}
+\end{figure}
+
+Wir deuten $xyz$ als gew\"ohnliche rechtwinklige Koordinaten in
+einem dreidimensionalen Raum und zeichnen den Durchschnitt $AB$
+einer Ebene $x = \text{konst.}$ mit dem in der $(x,y)$-Ebene
+gelegenen Meeresbecken. Entspricht $C$ der kritischen
+geographischen Breite, so ist es nicht schwer, diese
+Singularit\"at durch Ausweichen in das komplexe Gebiet zu
+umgehen. W\"ahlen wir ferner irgend zwei Punkte $D, E$ zwischen
+$A$ und $B$ und umgeben $A$, von $D$ ausgehend und dorthin
+zur\"uckkehrend, mit einer kleinen Kurve und verfahren
+entsprechend bei $B$ --- r\"aumlich gesprochen: umgeben wir die
+Randkurve mit einem ringf\"ormigen Futteral ---, so stellen wir
+uns jetzt das Problem, unsere Differentialgleichung so zu
+integrieren, da{\ss} $\varphi$, wenn wir seine Wert\"anderung
+l\"angs der den Punkt $A$ umgebenden Kurve verfolgen, mit
+demselben Wert nach $D$ zur\"uckkehrt, mit dem es von dort
+ausging. Diese ``ver\"anderte'' Grenzbedingung ist mit der
+urspr\"unglichen, welche verlangte, da{\ss} $\varphi$ am Rande
+(im Punkte $A$) endlich bleibt und sich regul\"ar verh\"alt,
+\"aquivalent. Zwar sind die zu der neuen und der alten
+Grenzbedingung geh\"origen \textsc{Green}schen Funktionen $G$,
+$G_1$ nicht identisch, wohl aber die den betreffenden
+Randbedingungen unterworfenen L\"osungen von
+\[
+D(u) = f. \tag{1}
+\]
+Hiervon \"uberzeugen wir uns leichter im Falle nur
+\textit{einer} Variablen $y$; dann ergeben die Gleichungen
+\[
+u = \int G(y,y')f(y')dy',\quad u_1 = \int G_1(y,y')f(y')dy'
+\]
+durch Anwendung des \textsc{Cauchy}schen Integralsatzes, da{\ss}
+$u - u_1 = 0$ ist.
+
+Um jetzt das Problem~(1) zu behandeln, ziehe ich die vorige
+Methode heran, die hier aber in zwei Stufen zur Anwendung kommt,
+da unsere ver\"anderte Randbedingung f\"ur die Gleichung $\Delta
+u = f$ unzul\"assig ist.\footnote{
+  Diese Randbedingung ist nicht von solcher Art, da{\ss} sie eine 
+  bestimmte L\"osung von $\Delta(u) = f$ auszeichnet.} 
+Wir k\"onnen setzen
+\[
+D(u) = \Delta(h_1 u) + D_1(u) + D_2(u);
+\]
+dabei soll $D_1(u)$ nur die Glieder 1.~Ordnung $\frac{\partial
+u}{\partial x}, \frac{\partial u}{\partial y}, D_2(u)$ aber nur
+$u$ selbst enthalten. Indem wir
+\[
+\Delta(v) = f
+\]
+unter der Randbedingung $v = 0$ integrieren, erhalten wir f\"ur
+$u = \frac{v}{h_1}$ eine am Rande endliche und regul\"are
+Funktion, f\"ur welche
+\[
+\Delta(h_1 u) \equiv D_0(u) = f
+\]
+ist. Darauf integrieren wir
+\[
+D_0(u) + D_2(u) = f
+\]
+unter Zugrundelegung der urspr\"unglichen Grenzbedingung nach
+der gew\"ohn\-lichen Methode. Der in der hierbei zu benutzenden
+Integralgleichung auftretende Kern ist zwar unendlich, aber von
+solcher Ordnung, da{\ss} sich die Singularit\"at durch Iteration
+des Kerns beseitigen l\"a{\ss}t: die partielle Integration,
+welche Glieder von einer zu hohen Ordnung des Unendlichwerdens
+einf\"uhren w\"urde, bleibt uns an dieser Stelle erspart.
+
+Das damit bew\"altigte Integrationsproblem ist aber der Integration
+von
+\[
+D_0(u) + D_2(u) = f
+\]
+unter der ver\"anderten Grenzbedingung \"aquivalent, und
+infolgedessen k\"onnen wir jetzt die zweite Stufe ersteigen und
+auch die L\"osung von
+\[
+D(u) \equiv \big(D_0(u) + D_2(u)\big) + D_1(u) = f
+\]
+unter der ver\"anderten Grenzbedingung bestimmen.
+
+\bigskip
+
+Wir haben bis jetzt das Glied $\mathit{\Pi}$ als so klein
+vorausgesetzt, da{\ss} wir es ganz vernachl\"assigen durften.
+Heben wir diese Voraussetzung auf, so entstehen keine
+wesentlichen neuen Schwierigkeiten. $\mathit{\Pi}$ ist ein von
+$\zeta$ erzeugtes Anziehungspotential; wir haben also
+\[
+\mathit{\Pi} = \int\frac{\zeta' d\sigma'}{r},
+\]
+wenn $d\sigma'$ ein Fl\"achenelement der Kugel, $\zeta'$ den
+Wert der Funktion $\zeta$ im Schwerpunkt $(x', y')$ dieses
+Fl\"achenelementes, $r$ aber die r\"aumlich gemessene Entfernung
+der beiden Kugelpunkte $(x, y)$; $(x', y')$ bedeutet, und die
+Integration \"uber die ganze Kugeloberfl\"ache erstreckt wird.
+Wir k\"onnen auch schreiben
+\[
+\mathit{\Pi} = \int\frac{\zeta' dx' dy'}{k^2 r}.
+\]
+
+Setzen wir dies in unsere Ausgangsgleichungen ein, von denen wir
+noch die erste mittels Aufstellung der zugeh\"origen
+\textsc{Green}schen Funktion und unter Ber\"ucksichtigung der
+Randbedingung aus einer Differential- in eine Integralgleichung
+verwandeln, so erhalten wir zwei simultane Integralgleichungen
+f\"ur $\zeta$ und $\varphi$, die mit Hilfe der soeben
+er\"orterten Methoden aufgel\"ost werden k\"onnen.
+
+\newpage
+
+
+\begin{center}
+\bigskip\bigskip\bigskip\label{dritter}
+{\Large Dritter Vortrag}
+
+\bigskip\bigskip\bigskip
+{\Large ANWENDUNG DER INTEGRALGLEICHUNGEN \bigskip
+
+AUF HERTZSCHE WELLEN}
+\end{center}
+
+\newpage
+
+Ich will heute \"uber eine Anwendung der Integralgleichungen auf
+\textsc{Hertz}sche Wellen vortragen und insbesondere die
+\"au{\ss}erst merkw\"urdigen Beugungserscheinungen behandeln,
+welche bei der drahtlosen Telegraphie eine so wichtige Rolle
+spielen; ist es doch eine wunderbare Tatsache, da{\ss} die
+Kr\"ummung der Erdoberfl\"ache, welche eine Fortpflanzung des
+Lichtes verhindert, f\"ur die Ausbreitung der
+\textsc{Hertz}schen Wellen kein Hindernis darstellt, da{\ss}
+dieselben vielmehr auf der Erdoberfl\"ache von Europa bis
+Amerika zu laufen verm\"ogen. Der Umstand, da{\ss} die
+\textsc{Hertz}schen Wellen eine viel gr\"o{\ss}ere L\"ange haben
+als die Lichtwellen, kann allein diese Erscheinung noch nicht
+erkl\"aren. Eine solche Erkl\"arung ergibt sich vielmehr erst
+durch Betrachtung der Differentialgleichungen des Problems.
+
+Setzen wir die Lichtgeschwindigkeit gleich $1$, und verstehen wir
+mit \textsc{Maxwell}\label{Lichtgeschwindig}\label{Maxwell}
+
+\begin{tabular}{rrrrl}
+\text{unter} & $\alpha$, & $\beta$, & $\gamma$ & 
+  \text{die Komponenten der magnetischen Kraft,\label{Magnet}} \\
+\text{unter} & $F,$ & $G,$ & $H$ &
+  \text{die Komponenten des Vektorpotentiales,} \\
+\text{unter} & $f,$ & $g,$ & $h$ &
+ \text{die Komponenten der elektrischen Verschiebung,\label{Versch}} \\
+\text{unter} & & $\psi$ & & 
+ \text{das skalare Potential,\label{skalaresPot}} \\
+\text{unter} & $u,$ & $v,$ & $w$ &
+  \text{die Komponenten des Konduktionsstromes, \label{Konduk}} \\
+\text{unter} & & $\varrho$ & & 
+  \text{die Dichte der Elektrizit\"at, \label{Dichte}}
+\end{tabular}
+
+\noindent so gelten die Gleichungen
+\[
+\alpha = \frac{\partial H}{\partial y} - \frac{\partial G}{\partial x}
+\]
+\vspace{5mm}
+\[
+4\pi f = - \frac{\partial F}{\partial t} - 
+\frac{\partial\psi}{\partial x},
+\]
+\vspace{5mm}
+\[
+4\pi\left(\mu + \frac{\partial f}{\partial t}\right) = 
+\frac{\partial\gamma}{\partial y} - \frac{\partial\beta}{\partial z},
+\]
+\vspace{5mm}
+\[
+\sum\frac{\partial f}{\partial x} = \frac{\partial f}{\partial x} 
++ \frac{\partial g}{\partial y} + \frac{\partial h}{\partial z} 
+= \varrho,
+\]
+\[
+\sum\frac{\partial F}{\partial x} + \frac{\partial\psi}{\partial t} 
+= 0,
+\]
+und es folgt
+\begin{align*}
+4\pi\cdot\mu &= \frac{\partial^2{F}}{\partial{t^2}}-\Delta F,\\
+4\pi\cdot\varrho &= \frac{\partial^2{\psi}}{\partial{t^2}}-\Delta\psi.
+\end{align*}
+Wir betrachten nun eine ged\"ampfte synchrone \label{synchron}
+Schwingung, indem wir annehmen, da{\ss} alle unsere Funktionen
+proportional sind mit der Exponentialgr\"o{\ss}e
+\[
+e^{i\omega t} .
+\]
+Aus den so zustande kommenden komplexen L\"osungen erhalten wir
+die physikalischen durch Trennung in reellen und imagin\"aren
+Bestandteil.  Der reelle Teil von $\omega$ gibt die
+Schwingungsperiode, der imagin\"are die D\"ampfung.
+
+Aus unserem Ansatz folgt
+\begin{align*}
+  \frac{\partial F}{\partial t}&=i \omega \cdot F,\\
+  \frac{\partial \psi}{\partial t}&=i \omega \cdot \psi,
+\end{align*}
+und man kann daher $F$ und $\psi$ als retardierte Potentiale
+\label{retardPot} darstellen wie folgt:
+\begin{align*}
+F    &= \int\mu'  \frac{e^{-i \omega r}}{r} d\tau',\\
+\psi &= \int\varrho' \frac{e^{-i \omega r}}{r} d\tau';
+\end{align*}
+$d\tau'$ ist das Raumelement im $(x', y', z')$-Raume, $\mu'$,
+$\varrho'$ die Werte von $\mu$, $\varrho$ im Punkte $(x', y',
+z')$, $r$ die Entfernung der Punkte $(x', y', z')$ und $(x, y,
+z)$.
+
+In den meisten Problemen treten zwei verschiedene Medien auf,
+der freie \"Ather und die leitenden K\"orper; von den letzteren
+wollen wir annehmen, da{\ss} sie sich wie vollkommene Leiter
+verhalten, da{\ss} also in ihrem Innern das Feld verschwindet,
+die elektrischen Kraftlinien auf ihrer Oberfl\"ache normal
+stehen, w\"ahrend die magnetischen in dieselbe hineinfallen; dem
+Umstande, da{\ss} Ladung und Str\"omung nur an der Oberfl\"ache
+des Leiters vorhanden ist, wollen wir dadurch entsprechen,
+da{\ss} wir die obigen Ausdr\"ucke f\"ur $F$ und $\psi$
+modifizieren, indem wir an Stelle der Raumintegrale
+Oberfl\"achenintegrale einf\"uhren. Wir schreiben
+\begin{align*}
+  \psi &= \int \varrho'' \frac{e^{-i \omega r}}{r} d\sigma',\\
+  F    &= \int \mu''  \frac{e^{-i \omega r}}{r} d\sigma',
+\end{align*}
+wo $\varrho''$, $\mu''$ jetzt die Fl\"achendichte der Ladung
+bzw.\ Str\"omung bedeuten und $d\sigma'$ das Fl\"achenelement
+ist. 
+
+Wir unterscheiden gew\"ohnlich zwei leitende K\"orper, der eine
+soll der \"au{\ss}ere, der andere der innere Leiter hei{\ss}en;
+sie erzeugen das ``\"au{\ss}ere'' resp.~das ``innere'' Feld; das
+\"au{\ss}ere Feld ist gegeben, das innere gesucht. So ist z.~B.,
+wenn wir das Problem des Empfanges elektrischer Wellen
+betrachten, der Sender der \"au{\ss}ere, der Empfangsapparat der
+innere Leiter; beim Probleme der Beugung elektrischer Wellen ist
+der Erreger der \"au{\ss}ere, die Erdkugel der innere Leiter;
+bei dem Probleme der Schwingungserzeugung haben wir kein
+\"au{\ss}eres Feld, der Erreger wird dann als innerer Leiter
+anzusehen sein.
+
+Um nun zum Ansatz einer Integralgleichung zu gelangen, wollen
+wir unter den oben erkl\"arten Funktionen nur die zum
+unbekannten inneren Felde geh\"origen verstehen, soda{\ss} z.B.
+die obigen Integrale nur \"uber die Oberfl\"ache des inneren
+Leiters zu erstrecken sind; beachten wir nun, da{\ss} die innere
+Normalkomponente des elektrischen Vektors am inneren Leiter
+unserer obigen Annahme zufolge verschwinden mu{\ss}, so folgt,
+wenn $l$, $m$, $n$ die Richtungskosinus der Normale bedeuten,
+aus unseren Ausgangs-Gleichungen:
+\[
+4 \pi f = \frac{\partial \psi}{\partial n} + i \omega 
+\left( lF + mG + nH \right) = N,
+\]
+wo $N$ die Normalkomponente des \"au{\ss}eren Feldes, also eine
+bekannte Funktion ist.
+
+Bezeichnen wir jetzt die Fl\"achendichte statt mit $\varrho''$
+mit $\mu'$, so wird zufolge unseres Ausdruckes f\"ur $\psi$
+\[
+\frac{\partial \psi}{\partial n} = 2 \pi \mu + \int \mu' 
+\frac{\partial}{\partial n}
+\left(\frac{ e^{-i \omega r}}{r} \right) d\sigma'.
+\]
+Benutzen wir ferner unseren Ausdruck f\"ur $F$ und die entsprechenden
+f\"ur $G$ und $H$, so hat man
+\[
+i \omega \sum l F = \int \frac{e^{-i \omega r}}{r} i \omega 
+\sum l \mu'' \:d \sigma'.
+\]
+Diesen Ausdruck kann man nun in gewissen F\"allen durch partielle
+Integrationen auf die Form
+\[
+-i \omega \int L \mu' \:d \sigma'
+\]
+bringen, wobei $L$ eine bekannte Funktion ist. So haben wir
+schlie{\ss}lich
+\[
+2 \pi \mu + \int \mu' \left\{ \frac{\partial}{\partial n} 
+\left( \frac{e^{-i \omega r}}{r} \right) - i \omega L \right\} 
+d \sigma' = N,
+\]
+und dies ist die Integralgleichung 2. Art f\"ur $\mu$, auf die
+wir hinstrebten.  Im allgemeinsten Falle bekommt man zwei
+Integralgleichungen mit zwei Unbekannten, welche z.~B.\ $\mu$
+und $\nu$ sein m\"ogen, wo $\mu$ das oben definierte ist; wir
+setzen $\nu = \frac{dN}{dn}$, wo $\frac{d}{dn}$ die Ableitung in
+der Normalrichtung bezeichnet und $N$ die Normalkomponente der
+magnetischen Kraft ist.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics*[scale=0.3]{fig3.png}
+\end{center}
+\end{figure}
+
+Die Funktion $L$ l\"a{\ss}t sich dann besonders einfach bilden,
+wenn der innere Leiter ein Rotationsk\"orper ist und das
+\"au{\ss}ere Feld Rotationssymmetrie besitzt. Ist $s$, $s'$ die
+Bogenl\"ange, gemessen vom Endpunkte der Rotationsachse auf
+einem Meridian bis zu den Punkten $P$, $P'$, ist ferner
+$\vartheta$ der Winkel zwischen der Normale in $P$ und der
+Meridiantangente in $P'$, so wird $L$ als Funktion von
+$\vartheta$, $s$, $s'$ definiert durch die Differentialgleichung
+\[
+\frac{\partial L}{\partial s'} = \frac{e^{-i \omega r}}{r} 
+\cos \vartheta.
+\]
+
+Das Problem des Empfanges elektrischer Wellen l\"a{\ss}t sich auf
+Grund der obigen Integralgleichung 2.\ Art behandeln.
+
+Wollen wir nur das Problem der Erzeugung elektrischer Wellen
+betrachten, so haben wir das \"au{\ss}ere Feld gleich Null zu
+setzen, es wird also $N=0$, und wir haben eine homogene
+Integralgleichung vor uns; in ihr darf jedoch $\omega$ nicht
+mehr einen willk\"urlichen Parameterwert bedeuten, sondern ist
+eine zu bestimmende Zahl, die die Rolle der Eigenwerte spielt.
+
+Ich schreibe unsere Integralgleichung in der Form
+\[
+2 \pi \mu + \int K \mu' \:d \sigma' = N
+\]
+mit dem Kerne $K$; ich f\"uhre einen unbestimmten Parameter
+$\lambda$ ein und betrachte die allgemeine Gleichung
+\[
+2 \pi \mu + \lambda \int K \mu' \:d \sigma' = N .
+\]
+Das erste Glied h\"angt von zwei Unbestimmten $\lambda$ und
+$\omega$ ab. Wenn man die gew\"ohnliche \textsc{Fredholm}sche
+Methode\label{Fredholm3} anwendet, so erh\"alt man die L\"osung
+unserer obigen Integralgleichung in Gestalt einer meromorphen
+Funktion von $\lambda$, deren Nenner eine ganze Funktion von
+$\lambda$ ist. Man kann nun zeigen, da{\ss} dieser Nenner auch
+eine ganze Funktion von $\omega$ wird, soda{\ss} also auch hier
+unsere ausgezeichneten Werte $\omega$ sich als Nullstellen einer
+ganzen transzendenten Funktion ergeben.
+
+Wir wollen aber jetzt das gr\"o{\ss}ere Problem der Beugung
+ausf\"uhrlicher behandeln.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics*[scale=0.3]{fig4.png}
+\end{center}
+\end{figure}
+
+Nehmen wir zu diesem Ende an, da{\ss} der innere Leiter eine
+Kugel, die Erdkugel, vom Radius $\varrho$ ist und das
+\"au{\ss}ere Feld (dessen normale Komponente $N$ bedeutet) von
+einem punktf\"ormigen Erreger $S$ herr\"uhrt, dessen Entfernung
+$D$ vom Mittelpunkt $O$ der Erde nur sehr wenig gr\"o{\ss}er ist
+als der Radius $\varrho$. Wir w\"ahlen die Richtung $OS$ zur
+$z$-Achse und bezeichnen die Abweichung der Richtung $OM$, in
+der $M$ einen variablen Punkt der Kugeloberfl\"ache bedeutet,
+von $OS$ mit $\varphi$. Die Bedeutung von $\vartheta$, $\xi$,
+$\varphi'$; $r$, $r'$ ist aus der Figur ersichtlich:
+\begin{align*}
+	OM = OM' = OM_1 &= \varrho,\\
+	OS &= D,\\
+	SM &= r,\\
+	SM'&=r'.
+\end{align*}
+
+Der Wert der normalen Ableitung $N$ des \"au{\ss}eren Feldes
+berechnet sich im Punkte $M$, wie leicht zu sehen, nach der
+Formel
+\[
+4 \pi N = e^{i \omega \left( t-r \right) } 
+\left[ \frac{i \omega}{r} \sin \vartheta \sin \xi +
+\left( \frac{1}{r^2} + \frac{1}{i \omega r^3} \right)
+\cdot
+\left( \sin \vartheta \sin \xi + 2 \cos \vartheta \cos \xi \right) 
+\right].
+\]
+Da $\omega$ eine sehr gro{\ss}e Zahl ist --- denn die L\"ange
+der \textsc{Hertz}schen Wellen ist klein gegen\"uber dem Radius
+der Erde --- gen\"ugt es meistens, in dieser Formel nur das
+erste Glied, das in der eckigen Klammer auftritt, beizubehalten.
+
+Im vorhergehenden haben wir die Gleichung der \textsc{Hertz}sehen
+Wellen auf die Form
+\[
+2 \pi \mu = \int \mu' K d \sigma' + N
+\]
+gebracht und haben gezeigt, wie der Kern $K$ berechnet werden
+kann. Entwickeln wir jetzt $N$ und $K$ nach Kugelfunktionen oder
+vielmehr, da unser Problem die Symmetrie eines
+Rotationsk\"orpers mit der Achse $OS$ besitzt, nach
+\textsc{Legendre}schen Polynomen\label{Legendre} $P_n$, so
+gewinnen wir aus dieser Integralgleichung die elektrische
+Fl\"achendichte $\mu$ gleichfalls unter der Form einer nach den
+Funktionen $P_n$ fortschreitenden Reihe. Es gilt zun\"achst
+\[
+N = \sum K_n P_n; \qquad\qquad 
+\int\limits_0^{\pi} P_n N \sin \varphi \:d \varphi
+= \frac{2 K_n}{2n+1}.
+\]
+$K_n$ ist von der Form 
+\[
+\frac{A_n J_n\left( \omega \varrho \right)}{\varrho^2},
+\]
+wo $A_n$ eine nur von $n$, nicht aber von $\varrho$ abh\"angige
+Zahl ist, und $J_n$ eine mit der \textsc{Bessel}schen
+\label{Bessel} verwandte Funktion bedeutet.
+
+Wir verstehen n\"amlich unter $J_n(x)$ die in der Umgebung von
+$x = 0$ holomorphe L\"osung der Gleichung
+\[
+\frac{d^2 y}{dx^2} + y \left( 1 - 
+\frac{n \left( n+1 \right)}{x^2}
+\right) = 0,
+\]
+und $I_n(x)$ sei dasjenige Integral derselben Gleichung, welches
+sich f\"ur gro{\ss}e positive Werte von $x$ angen\"ahert wie
+$e^{-ix}$ verh\"alt. Da $J_n$, $I_n$ von einander unabh\"angig
+sind, k\"onnen wir au{\ss}erdem daf\"ur sorgen, da{\ss}
+\[
+{I_n}' {J_n} - {J_n}' {I_n} = 1
+\]
+ist, wenn unter ${J_n}'$, ${I_n}'$ die Ableitungen von $J_n$,
+$I_n$ verstanden werden.
+
+Die L\"osung unserer Integralgleichung lautet jetzt
+\[
+\mu = A \sum \frac{K_n P_n \left( \cos \varphi \right)}{{I_n}' 
+\left( \omega\varrho \right) J_n \left( \omega\varrho \right)}.
+\]
+Da aber auch der Ausdruck von $K_n$ im Z\"ahler $J_n \left(
+\omega \varrho \right)$ als Faktor enth\"alt, und sich
+infolgedessen dieser Term $J_n \left( \omega \varrho \right)$
+heraushebt, ist
+\[
+{I_n}' \left( \omega \varrho \right) = 0
+\]
+die f\"ur die \textit{Eigenschwingungen} charakteristische Gleichung.
+
+Um zu \"ubersichtlichen Resultaten zu gelangen, benutzen wir
+angen\"aherte Formeln. Diese beruhen darauf, da{\ss} $\omega$
+sehr gro{\ss}, andererseits aber $\frac{D}{\varrho}-1$ sehr
+klein ist. Wir st\"utzen uns auf die folgende N\"aherungsformel
+\[
+\int \eta e^{i \omega \theta} dx = \eta e^{i \theta}
+\sqrt{\frac{2 \pi}{\omega\theta''}} e^{\pm\frac{i \pi}{4}},
+\]
+$\theta$, $\eta$ sind gegebene Funktionen von $x$, $\omega$ eine
+sehr gro{\ss}e Zahl, $\theta''$ bedeutet die zweite Ableitung
+von $\theta$, und auf der rechten Seite ist als Argument ein
+solcher Wert einzusetzen, f\"ur den $\theta$ ein Maximum oder
+Minimum besitzt; je nachdem der eine oder der andere Fall
+vorliegt, ist in dem Faktor $e^{\pm \frac{i \pi}{4}}$ das
+Zeichen $+$ oder das Zeichen $-$ zu nehmen. Hat $\theta$ in dem
+Intervall, \"uber welches zu integrieren ist, mehrere Maxima
+oder Minima, so ist der Ausdruck rechts durch eine Summe analog
+gebildeter Terme zu ersetzen.
+
+Durch Anwendung dieser Formel bekommen wir f\"ur die
+\textsc{Legendre}schen Polynome $P_n \left( \cos \varphi
+\right)$ die folgenden, f\"ur gro{\ss}e $n$ g\"ultigen
+angen\"aherten Ausdr\"ucke:
+\[
+P_n = 2 \sqrt \frac{2 \pi}{ n \sin \varphi}
+\cdot \cos \left( n \varphi+ \frac{\varphi}{2}-\frac{\pi}{4} \right).
+\]
+Aus ihnen folgt f\"ur die $K_n$, falls $n<\omega\varrho$,
+\[
+K_n = \frac{2n+1}{8r \sqrt{n}}
+\left[ e^{i \alpha} + e^{i \alpha'} \right]
+\frac{i \omega \sin \vartheta \sin \xi}
+{\sqrt{D \varrho \cos \vartheta \cos \xi}}
+\sqrt{\frac{\sin \vartheta}{\omega \varrho}} .
+\]
+Dabei ist
+\begin{align*}
+  \alpha &= n\varphi - \omega r + \frac{\varphi}{2} - \frac{\pi}{2},\\
+  \alpha'&= n\varphi' - \omega r' + \frac{\varphi'}{2} ,
+\end{align*}
+gesetzt, und f\"ur $\xi$, $\vartheta$, $\varphi$, $\varphi'$,
+$r$, $r'$ sind die aus der Figur zu entnehmenden Werte
+einzusetzen, f\"ur welche
+\begin{align*}
+\sin \xi = \frac{n}{\omega \varrho} && \left(\xi < \frac{\pi}{2} 
+\right)
+\end{align*}
+wird. Die gleiche N\"aherungsformel gilt auch f\"ur $n>\omega
+\varrho$, falls in der eckigen Klammer $e^{i\alpha} +
+e^{i\alpha'}$ durch $e^{i\alpha}$ oder $e^{i\alpha'}$ ersetzt
+wird; die Diskussion dar\"uber, welches der beiden Glieder
+beizubehalten ist, will ich hier nicht geben.
+
+Auch um ${I_n}'J_n$ angen\"ahert zu berechnen, m\"ussen wir die
+beiden F\"alle $n < \omega\varrho$ und $n > \omega\varrho$
+unterscheiden. Im ersten Falle ist
+\[
+{I_n}'J_n = e^{i \frac{\alpha-\alpha'}{2}}
+\cdot
+\cos \tfrac{\alpha-\alpha'}{2},
+\]
+im zweiten
+\[
+{I_n}'J_n=\tfrac{1}{2}
+\]
+zu setzen. Daraus ergibt sich, da{\ss} sowohl f\"ur
+$n<\omega\varrho$ als auch f\"ur $n > \omega\varrho$ und
+gro{\ss}e $n$
+\[
+\frac{K_n}{{I_n}'J_n} =\frac{\sqrt n}{2r} \: e^{i\alpha} \:
+\frac{i \sqrt{\omega} \sin \xi {\left( \sin \vartheta
+\right)^{\tfrac{3}{2}}}}{\varrho 
+\sqrt{D \cos \vartheta \cos \xi}}
+\ \footnote[1]{Der Ausdruck von $\mu$, kann auch auf eine einfachere
+Form zur\"uckgef\"uhrt werden, n\"amlich
+\[
+\mu=\frac{-i}{4\pi\omega^2\varrho^2 D^2} \sum{ n \left( n+1
+\right) \left( 2n+1 \right) \frac{I_n \left( \omega D \right)}
+{{I_n}' \left( \omega \varrho \right)} P_n \left( \cos \varphi
+\right)}
+\]
+und diese Formel ist nicht eine angen\"aherte, sondern eine strenge.}
+\]
+gilt. In der Summe, durch welche wir $\mu$ dargestellt haben,
+geben demnach diejenigen Glieder, f\"ur welche nahezu $n = \mu$
+ist, den Ausschlag.  F\"ur diese gilt n\"aherungsweise
+\[
+\xi=\frac{\pi}{2}\qquad\text{und}\qquad r=\sqrt{2 \varrho D}.
+\]
+Da ferner wegen der Kleinheit von $\frac{D}{\varrho}-1$ der Winkel
+$\varphi$ immer nahezu $= 0$ bleibt, variiert $\alpha$ als
+Funktion von $n$ nur sehr wenig, wenn $n$ auf die dem Werte $n =
+\omega$ benachbarten ganzen Zahlen beschr\"ankt wird. Wir
+d\"urfen also, wenn wir noch die L\"angeneinheit so gew\"ahlt
+denken, da{\ss} $\varrho=1$ ist, schreiben
+\[
+\mu = C \sum
+{
+\frac
+{\sqrt{\omega} \sin \xi {\left( \sin \vartheta \right)}^{\frac{3}{2}}}
+{\sqrt{\cos \vartheta \cos \xi}}
+}
+\cdot
+\frac{1}{\sqrt{\sin \psi}}
+\left( \cos n\psi+\frac{\psi}{2}-\frac{\pi}{4} \right).
+\]
+Dabei ist $\mu$ der Wert der elektrischen Oberfl\"achendichte im
+Punkte $M_1$ (s.~die Figur).
+
+Aus
+\begin{align*}
+	\sin\xi=\frac{n}{\omega},&& \sin\vartheta=\frac{n}{\omega D};&& \cos\xi=\sqrt{1-\frac{n^2}{\omega^2}},&& \cos\vartheta=\sqrt{1-\frac{n^2}{D^2\omega^2}}
+\end{align*}
+bekommen wir
+\[\frac
+{\sin \xi {\left( \sin\vartheta \right)}^{\frac{3}{2}}}
+{\sqrt{\cos\vartheta\cos\xi}}
+= \frac{
+\frac{n}{\omega}
+\cdot
+{\left(\frac{n}{\omega D}\right)}^{\frac{3}{2}}\sqrt{D}}
+{\sqrt[4]{\left(1+\frac{n}{\omega}\right)\left(
+ 1+\frac{n}{D\omega}\right)}}
+\cdot
+\frac{\sqrt{\omega}}
+{\sqrt[4]{\omega-n}\cdot
+\sqrt[4]{\omega \left( D - 1 \right) }}
+\cdot
+\frac{1}{\sqrt[4]{1+\frac{\omega-n}{\omega \left( D - 1 \right)}}},
+\]
+soda{\ss} in der N\"ahe von $n = \omega$ der linke Ausdruck von
+derselben Gr\"o{\ss}enordnung ist wie
+\[
+\frac{\sqrt[4]{\omega}}{\sqrt[4]{D-1}}
+\cdot
+\frac{1}{\sqrt[4]{n-\omega}}.
+\]
+F\"uhren wir diese Ann\"aherung in unsere Formel f\"ur $\mu$ ein
+und ersetzen \\$\cos{\left( n \psi+\frac{\psi}{2} -
+\frac{\pi}{4}\right)}$ zun\"achst durch $e^{i\left(n\psi+ 
+\frac{\psi}{2}-\frac{\pi}{4}\right)}$, so kommen wir auf die 
+Reihe
+\[
+\frac{\omega^{\tfrac{3}{4}}e^{i\left(\frac{\psi}{2}-
+\frac{\pi}{4}\right)}}{\sqrt{\sin\psi}\cdot\sqrt[4]{D-1}}
+\cdot
+\sum_{\left(n\right)}
+{\frac{e^{i n \psi}}{\sqrt[4]{n-\omega}}}.
+\]
+Schreiben wir
+\[
+S=\sum_{\left(n\right)}{\frac{e^{i n \psi}}{\sqrt{n-\omega}}},
+\]
+so k\"onnen wir
+\begin{align*}
+&&&&\int\limits_{\nu}^{\nu+1}{S e^{-i \omega \psi} d \omega}&&
+\text{($\nu$ ganzzahlig})
+\end{align*}
+als einen Mittelwert der Reihe $S$ betrachten, und ich will $S$
+durch diesen Mittelwert ersetzen. Ein solches Verfahren ist
+gewi{\ss} berechtigt, wenn es uns nur daran liegt, die
+Gr\"o{\ss}enordnung von $S$ festzustellen, umsomehr als in
+Wirklicheit von einer Antenne nicht blo{\ss} Schwingungen einer
+einzigen Wellenl\"ange, sondern ein ganzes kontinuierliches
+Spektrum von Schwingungen ausgeht. Wir erhalten
+\begin{align*}
+\int\limits_{\nu}^{\nu+1}{S e^{-i \omega \psi} d \omega}
+&=\sum_{\left(n\right)}{\int\limits_{\nu}^{\nu+1}{
+\frac{e^{i\left(n-\omega\right)\psi}}
+{\sqrt[4]{n-\omega}}
+d \omega
+}}\\
+&=-\int\limits_{-\omega}^{\infty}{
+\frac{e^{i q \psi}}{\sqrt[4]{q}}
+}d q,
+\end{align*}
+und da $\omega$ sehr gro{\ss} ist, wird dieses Integral mit
+$\displaystyle\int\limits_{-\infty}^{+\infty}
+\displaystyle\frac{e^{i q \psi}}{\sqrt[4]{q}}d q$ im
+wesentlichen \"ubereinstimmen.
+
+Auf \"ahnliche Weise zeigt man, da{\ss} der Mittelwert von
+\[
+\sum{\frac{e^{-i n \psi}}{\sqrt[4]{n-\omega}}}
+\]
+gegen den von $S$ zu vernachl\"assigen ist. Damit gewinnen wir das
+Resultat, da{\ss}
+\[
+\mbox{$\mu$ von der Gr\"o{\ss}enordnung 
+$\frac{\sqrt[4]{\omega^3}}{\sqrt[4]{D-1}}$}\quad
+\]
+und also
+\[
+\mbox{$\frac{\mu}{N}$ von der Gr\"o{\ss}enordnung 
+$\frac{1}{\sqrt[4]{\omega\left(D-1\right)}}$}
+\]
+ist. Die Beugung ist daher um so gr\"o{\ss}er, je n\"aher die
+Quelle $S$ der Erdoberfl\"ache gelegen ist und je l\"anger die
+entsendeten Wellen sind. Auf diese Weise wird die zun\"achst
+staunenerregende Tatsache verst\"andlich, da{\ss} es mit Hilfe
+der in der drahtlosen Telegraphie verwendeten
+\textsc{Hertz}schen Wellen gelingt, vom europ\"aischen Kontinent
+z.~B. bis nach Amerika zu telegraphieren.
+
+Wenn man nicht den mittleren Wert der Reihe betrachten will,
+welcher von einem Integral dargestellt wird, sondern den
+wirklichen Wert dieser Reihe, so hat man eine Diskussion
+durchzuf\"uhren, welche auf einem wohlbekannten \textsc{Abel}schen 
+Satz\label{AbelscherSatz} beruht, und deren Resultate etwas
+komplizierter, aber sonst ganz \"ahnlich den vorliegenden sind.
+
+\vspace{5pt}
+
+\selectlanguage{french}
+\textbf{Note.} Je me suis aper\c{c}u que les derni\`eres
+conclusions doivent \^etre modifi\'ees. Les formules
+approch\'ees dont j'ai fait usage ne sont plus vraies lorsque
+$n$ est tr\`es voisin de $\omega \varrho$. Elles doivent \^etre
+alors remplac\'ees par d'autres, o\`u figure une transcendante
+enti\`ere satisfaisant \`a l'\'equation diff\'erentielle
+\[
+y''= xy
+\]
+
+Mais les termes qui doivent \^etre ainsi modifi\'es sont en
+petit nombre et j'avais cru d'abord que le r\'esultat final n'en
+serait pas modifi\'e. Un examen plus approfondi m'a montr\'e
+qu'il n'en est rien. La somme des termes modifi\'es est
+comparable \`a celle des autres termes dont j'avais tenu compte
+et qui est donn\'ee par la formule pr\'ec\'edente; il en
+r\'esulte une compensation presque compl\`ete de sorte que la
+valeur de $\mu$ donn\'ee par les formules d\'efinitives est
+notablement plus petite que celle qui r\'esulterait des formules
+pr\'ec\'edentes.
+
+\selectlanguage{german}
+\newpage
+
+\begin{center}
+\bigskip\bigskip\bigskip\label{vierter}
+{\Large Vierter Vortrag}
+
+\bigskip\bigskip\bigskip
+{\Large \"UBER DIE \bigskip
+
+REDUKTION DER ABELSCHEN INTEGRALE \bigskip 
+
+UND DIE \bigskip
+
+THEORIE DER FUCHSSCHEN FUNKTIONEN}
+\end{center}
+
+\newpage
+
+Meine Herren! Ich habe die Absicht, Ihnen heute \"uber die
+Reduktion der \textsc{Abel}schen Integrale im Zusammenhang mit
+der Theorie der automorphen und insbesondere der
+\textsc{Fuchs}schen Funktionen vorzutragen. \label{AbelscheIntegrale}
+
+Ein System von \textsc{Abel}schen Funktionen von $p$ Variabeln
+und $2p$ Perioden hei{\ss}t \textit{reduzibel}, wenn es sich auf
+ein System von $q$ Variabeln und $2q$ Perioden $(q<p)$
+zur\"uckf\"uhren l\"a{\ss}t. Hierbei ist es von vornherein von
+Wichtigkeit, zwei F\"alle zu unterscheiden:
+
+Im \textit{ersten} Falle soll es m\"oglich sein, das System $S$
+\textsc{Abel}scher Funktionen von $p$ Variabeln durch eine
+\textit{algebraische Kurve}\label{algebraischeCurve} $C$ vom
+Geschlechte\label{CurveGeschlecht} $p$ zu erzeugen. Ebenso soll
+das System $S'$ von $q$ Variabeln aus der Theorie eines
+algebraischen Gebildes vom Geschlechte $q$ entspringen.
+
+Dieser unser erste Fall ist aber bekanntlich nicht der
+allgemeine; denn die Kurve $C$ h\"angt nur von $3p - 3$
+Konstanten ab, w\"ahrend die allgemeinen \textsc{Abel}\-schen
+Funktionen von $p$ Variabeln $\frac{p\left(p+1\right)}{2}$
+Parameter enthalten. Dadurch ist der \textit{zweite} der beiden
+F\"alle gegeben, die wir unterscheiden. In diesem Falle
+n\"amlich soll mindestens eines der beiden Systeme $S$, $S'$
+nicht aus der Theorie der algebraischen Gebilde entspringen.
+
+In meinem heutigen Vortrag will ich mich durchaus auf den
+erstgenannten Fall beschr\"anken. Aber auch dann mu{\ss} ich
+noch zwei F\"alle unterscheiden. Wir kn\"upfen n\"amlich unsere
+Betrachtungen an die beiden algebraischen Kurven $C$ und $C'$
+an. Im Falle der Reduzibilit\"at besteht zwischen beiden eine
+algebraische \textit{Korrespondenz}. \label{Korrespondenz} Die
+Beschaffenheit derselben liegt der in Aussicht gestellten
+Fallunterscheidung zugrunde.
+
+Der erste Fall ist der folgende. Verm\"oge der Korrespondenz ist
+jedem Punkte $M$ von $C$ ein und nur ein Punkt $M'$ von $C'$
+zugeordnet, w\"ahrend umgekehrt jedem Punkte von $C'$ $n$ Punkte
+von $C$ entsprechen. Ich nenne dann $n$ die
+\textit{charakteristische Zahl} \label{charakteristische} der
+Korrespondenz und sage, $C$ ist eine \textit{vielfache
+Kurve}\label{vielfacheCurve} von $C'$.
+
+Der eben genannte erste Fall ist aber nicht der allgemeine. Das
+ist vielmehr der nun folgende zweite. Hier n\"amlich besteht die
+Korrespondenz nicht zwischen einzelnen Punkten $M$ und $M'$,
+sondern zwischen Systemen von Punkten $M_1,\dots,M_{\nu}$ von
+$C$ mit den Koordinaten $x_1,y_1;\dots;x_{\nu},y_{\nu}$ und
+${M_1}',\dots,{M_{\nu}}'$ von $C'$ mit den Koordinaten
+${x_1}',{y_1}';\allowbreak\dotsc;\allowbreak {x_\nu}'{y_\nu}'$. 
+Jedem System auf $C$ soll dabei ein und nur ein System auf $C'$ 
+entsprechen, w\"ahrend umgekehrt einem System auf $C'$ im
+allgemeinen mehrere Systeme auf $C$ zugeordnet sind. Ich sage
+dann, $C$ ist eine \textit{pseudovielfache Kurve}
+\label{pseudovielfacheCurve} von $C'$.
+
+Im erstgenannten Falle sind $x'$ und $y'$ rationale Funktionen
+von $x$ und $y$, w\"ahrend im zweiten nur geschlossen werden
+kann, da{\ss} jede rationale und symmetrische Funktion der
+$({x_1}'{y_1}',\dotsc,{x_\nu}'{y_\nu}')$ eine rationale Funktion
+der $({x_1}{y_1},\allowbreak\dotsc, \allowbreak
+{x_\nu}{y_\nu})$ ist. Es ist leicht zu sehen, da{\ss} jede Kurve
+$C$, die eine vielfache von $C'$ ist, auch eine pseudovielfache der
+Kurve $C'$ ist. Umgekehrt aber habe ich mehrere Beispiele bilden
+k\"onnen daf\"ur, da{\ss} nicht jede pseudovielfache Kurve von
+$C'$ auch eine vielfache von $C'$ ist. Ich will jedoch hier nicht
+n\"aher darauf eingehen, zumal da sich meine folgenden Darlegungen 
+durchaus an den \textsc{ersten Fall} anschlie{\ss}en werden.
+
+Im Falle der Reduzibilit\"at unserer Integrale ist es m\"oglich,
+ihre Periodentabelle\label{Periodentabelle} auf eine besondere
+\textit{Normalform} zu bringen. Die folgenden beiden Beispiele
+m\"ogen eine Anschauung von der Beschaffenheit derselben geben.
+
+1) $q = 1$; $p = 3$. Die Periodentabelle kann auf die folgende
+Form gebracht werden:
+\[
+\begin{array}{cccccc}  
+  2 i \pi & 0 & 0 & h & \frac{2 i \pi}{\alpha} & 0 \\
+  0 & 2 i \pi & 0 & \frac{2 i \pi}{\alpha} & a & b \\
+  0 & 0 & 2 i \pi & 0 & b & c.
+\end{array}
+\]
+
+2) $q = 2$; $p = 4$. Die normierten Perioden sind hier:
+\[
+\begin{array}{cccccccc} 
+  2 i \pi & 0 & 0 & 0 & a & b & 0 & \frac{2 i \pi}{\alpha} \\
+  0 & 2 i \pi & 0 & 0 & b & c & \frac{2 i \pi}{\alpha\beta} & 0 \\
+  0 & 0 & 2 i \pi & 0 & 0 & \frac{2 i \pi}{\alpha\beta} & a' & b' \\
+  0 & 0 & 0 & 2 i \pi & \frac{2 i \pi}{\alpha} & 0 & b' & c'.
+\end{array}
+\]
+
+Die Zahlen $\alpha$, $\beta$ bedeuten in beiden Tabellen ganze
+rationale Zahlen.
+
+Ich definiere nun noch eine \textit{zweite charakteristische
+Zahl $\kappa$}. Sie gibt die Ordnung der Thetafunktion von $q$
+Variabeln an, in die eine Thetafunktion erster Ordnung von $p$
+Variabeln im Falle der Reduzibilit\"at transformiert werden
+kann. Im ersten Beispiel ist $\kappa = \alpha$, im zweiten
+$\kappa = \alpha\beta$. \textit{Die beiden charakteristischen
+Zahlen $n$ und $\kappa$ sind nun immer einander gleich.} Ich
+habe zwei Beweise f\"ur diesen Satz gefunden, die ich jetzt in
+ihren Grundz\"ugen auseinandersetzen will.
+
+\textit{Erster Beweis}. Seien $M$ und $M'$ zwei
+\textsc{Abel}sche Integrale erster, zweiter oder dritter Gattung
+der Kurve $C$. Ich denke mir die zugeh\"orige \textsc{Riemann}sche 
+Fl\"ache irgendwie l\"angs $2p$ von einem Punkte ausgehenden
+nichtzerst\"uckenden R\"uckkehrschnitten kanonisch
+aufgeschnitten.  Dann m\"ogen $M$ und $M'$ die folgenden
+Perioden besitzen:
+\begin{align*}
+M &: x_1,x_2,\dots,x_{2p},\\
+M' &: y_1,y_2,\dots,y_{2p}.
+\end{align*}
+Ich mu{\ss} nun eine charakteristische fundamentale
+\textit{Bilinearform} definieren. Ich setze n\"amlich:
+\[
+F(x,y)=\int{MdM'}
+\]
+wo das Integral l\"angs der ganzen Kontur der Zerschneidung
+erstreckt werden soll. Wenn $x$, $y$ Normalperioden sind, so
+nimmt $F(x, y)$ die folgende Form an:
+\[
+F(x,y) = \sum\limits_{\kappa=1}^p
+\left(x_{2\kappa-1}y_{2\kappa}-x_{2\kappa}y_{2\kappa-1}\right).
+\]
+Nehme ich an, es sei $M$ eines der reduziblen Integrale, dann
+dr\"ucken sich seine $2p$ Perioden ganzzahlig und linear durch
+nur $2q$ Perioden $\omega_1,\dots, \omega_{2q}$ aus. Ich habe
+also dann:
+\begin{align*}
+&&&&&&x_{\kappa}=\sum\limits_{j=1}^{2q} m_{\kappa j}\omega_j
+&&(\kappa=1,2,\dots,2p),
+\end{align*}
+wo die $m_{\kappa}$ ganze rationale Zahlen bedeuten. Wenn nun
+$M$ und $M'$ Integrale erster Gattung sind, dann ist bekanntlich
+\[
+F(x,y) = 0
+\]
+Wenn man in diese Gleichung die Ausdr\"ucke der $x$ durch die
+$\omega$ einsetzt, so bekommt man eine bilineare Gleichung
+zwischen den $y$ und $\omega$, die in der folgenden Form
+geschrieben werden kann:
+\[
+\sum\limits_{j=1}^{2q} H_j\omega_j = 0
+\]
+Seien nun $u_1,\dots,u_p$ $p$ linear unabh\"angige Integrale
+erster Gattung von $C$. Dann k\"onnen wir setzen:
+
+\begin{center}
+\begin{math}
+\begin{array}{llllllll}
+U &= \mu_1 u_1 &+& \mu_2 u_2 &+& \dots &+ \mu_p u_p\\
+U' &= {\mu_1}' u_1 &+& {\mu_2}' u_2 &+& \dots &+ {\mu_p}' u_p\\
+\end{array}
+\end{math}
+\end{center}
+Die vorl\"aufig noch unbestimmten Koeffizienten $\mu'$ sollen
+nun so bestimmt werden, da{\ss} sie den $2q$ linearen
+Gleichungen:
+\begin{align*}
+&&&&&&H_j=0
+&&(j=1,2,\dots,2q)
+\end{align*}
+gen\"ugen. Wenn man dann noch beachtet, da{\ss} diese $2q$
+Gleichungen nicht linear unabh\"angig sind, sondern da{\ss}
+zwischen ihnen $q$ Relationen
+\[
+\sum H_j \omega_j =0
+\]
+bestehen, so ist leicht zu erkennen, da{\ss} auch $M_1$
+reduzierbar ist, und da{\ss}, so wie $M$ einer Schar von $q$
+reduziblen Integralen angeh\"ort, auch $M'$ ein Element einer
+$(p-q)$fach unendlichen linearen Schar von reduziblen Integralen
+ist. Doch dies nur nebenbei.
+
+Ich bemerke nun, da{\ss} $H_j$ eine lineare Funktion der
+$y_{\kappa}$ ist, soda{\ss} ich schreiben kann:
+\begin{align*}
+&&&&&&H_j=\sum\limits_{i=1}^{2p} h_{ij}y_{i}
+&&(j=1,2,\dots,2q),
+\end{align*}
+wo die $h_{ij}$ ganze rationale Zahlen sind. Aus den
+$m_{i\kappa}$ und den $h_{i\kappa}$ kann ich nun zwei Tabellen
+von je $2q$ Kolonnen und $2p$ Zeilen bilden. Aus beiden kann ich
+gewisse \mbox{$q$-reihige} Determinanten bilden. Ich bezeichne
+die der $m$ mit $D$ und die aus denselben Zeilen der $h$
+gebildete mit $D'$. Dann setze ich
+\[
+J=\sum{DD'}.
+\]
+$J$ ist nun in dem folgenden Sinne eine \textit{invariante}
+\label{invariante} Zahl: Sie bleibt unge\"andert, wenn man
+irgendeines der Periodensysteme $x$ oder $\omega$ durch ein
+\"aquivalentes ersetzt. Dabei hei{\ss}en zwei Periodensysteme
+\"aquivalent, wenn sie sich ganzzahlig und linear durcheinander
+ausdr\"ucken lassen. Man kann nun einerseits beweisen, da{\ss}
+\[
+J=\kappa^2,
+\]
+andererseits aber, da{\ss}
+\[
+J=n^2.
+\]
+Daraus kann man folgern, da{\ss}
+\[
+\kappa=n.
+\]
+Das ist der erste Beweis. Der nun folgende
+
+\textit{Zweite Beweis} ist wesentlich k\"urzer. Er beruht auf
+dem Vergleich der zu $S$ und $S'$ geh\"origen Bilinearformen
+$F(x,y)$ und $\Phi(\omega,\omega')$. Man hat n\"amlich
+einerseits
+\[
+F(x,y) = n\Phi(\omega,\omega'),
+\]
+andererseits
+\[
+F(x,y) = \kappa\Phi(\omega,\omega').
+\]
+
+Daraus schlie{\ss}t man
+\[
+\kappa=n.
+\]
+
+Ich komme nun zum \textit{Zusammenhang der Reduktionstheorie
+mit der Theorie der \textsc{Fuchs}schen Funktionen}.
+\label{Fuchs}\label{Reduktionstheorie}
+
+Bekanntlich definiert jede algebraische Kurve $C$ ein System von
+\textsc{Fuchs}schen Funktionen. Nun kann man die Tatsache,
+da{\ss} $C$ ein Vielfaches von $C'$ ist, auch folgenderma{\ss}en
+ausdr\"ucken. Es ist immer auf mannigfache Weise m\"oglich, der
+Kurve $C'$ eine Grenzkreisgruppe\label{Grenzkreisgruppe} $G'$
+und $C$ eine ebensolche Gruppe $G$ zuzuordnen, soda{\ss} $G$
+eine \textit{Untergruppe} von $G'$ ist. Ist im besonderen $C$
+ein $n$-faches von $C'$, dann ist $G$ eine Untergruppe vom Index
+$n$ von $G'$. Man erh\"alt daher einen Fundamentalbereich
+\label{Fundamentalbereich} von $G$ dadurch, da{\ss} man $n$
+geeignet gew\"ahlte Fundamentalbereiche von $G'$, die durch die
+Operationen von $G'$ auseinander hervorgehen, aneinander lagert.
+Das Polygon $P$ von $G$ erscheint dann in $n$ Polygone
+$P'(\beta)$ eingeteilt, die einem Polygon $P'$ von $G'$ im Sinne
+der nichteuklidischen Geometrie kongruent sind.\label{nichteuklid}
+
+Ich bezeichne die \textit{Seiten} des Polygons $P'$ mit
+$\gamma(\alpha)$ und die homologen Seiten von $P'(\beta)$ mit
+$\gamma(\alpha,\beta)$. Die Seiten $\gamma(\alpha,\beta)$ liegen
+entweder im Innern oder auf dem Rande von $P$. Ich nehme nun an,
+die Seite $\gamma(\alpha')$ gehe aus $\gamma(\alpha)$ verm\"oge
+einer Operation von $G'$ hervor. Wenn nun $\gamma(\alpha,\beta)$
+auf dem Rande von $P$ liegt, dann gibt es eine weitere Seite
+$\gamma(\alpha',\beta')$ auf diesem Rande, die mit
+$\gamma(\alpha,\beta)$ verm\"oge einer Operation von $G$
+konjugiert ist. Wenn jedoch $\gamma(\alpha,\beta)$ im Innern von
+$P$ liegt, so existiert eine derartige von $\gamma(\alpha,\beta)$
+verschiedene Seite nicht, sondern es fallen $\gamma(\alpha,\beta)$
+und $\gamma(\alpha',\beta')$ zusammen und bilden die gemeinsame
+Seite von $P'(\beta)$ und $P'(\beta')$. Aber wie dem auch sei,
+jedenfalls entspricht jeder Seite $\gamma(\alpha)$ von $P'$ eine
+Permutation der $n$ Ziffern $1, 2, \dotsc, n$.
+
+Eine der eben durchgef\"uhrten ganz \"ahnliche Betrachtung
+k\"onnen wir auch f\"ur die \textit{Ecken} von $P'$ anstellen.
+So wie wir n\"amlich die Seiten in Paare zusammenfa{\ss}ten, so
+k\"onnen wir die Ecken in Zyklen einteilen, so da{\ss} die Ecken
+eines Zyklus auseinander durch die Operationen von $G'$
+hervorgehen. Jedem solchen Zyklus kann wieder eine bestimmte
+Vertauschung der $n$ Ziffern $1, 2, \dotsc, n$ zugeordnet werden,
+die sich aus den den Seiten zugeordneten gewinnen l\"a{\ss}t.
+Ich nehme nun an, es habe~$P$ $2N$~Seiten und $Q$ Eckenzyklen.
+$2N'$ und $Q'$ sollen die gleiche Bedeutung f\"ur $P'$ haben.
+Die einem Eckenzyklus von $P'$ entsprechende Permutation
+l\"a{\ss}t sich in zyklische Permutationen zerlegen. Bei allen
+Eckenzyklen m\"ogen dabei im ganzen $\lambda_i$ zyklische
+Permutationen von gerade $i$ Ziffern vorkommen. Dann bestehen
+die folgenden Relationen:
+\begin{align*}
+	2p &= N - Q + 1,\\
+	2q &= N' - Q' + 1,\\
+	Q+2p-2 &= n(Q'+2q-2),\\
+	n(Q'-Q) &= 2(p-1)-2n(q-1),\\
+	\sum{\lambda_i} &= Q,\\
+	\sum{i\lambda_i} &= nQ'.
+\end{align*}
+Die bisher gegebenen allgemeinen Betrachtungen setzen uns nun
+instand, eine Reihe sch\"oner und wichtiger \textit{S\"atze
+\"uber die nichteuklidische Geometrie der Kreisbogenpolygone,
+sowie \"uber die Geometrie der algebraischen
+Kurven}\label{Geometrie} abzuleiten. Ich will im folgenden
+einige Beispiele solcher S\"atze anf\"uhren, ohne mich des
+n\"aheren auf Beweise einzulassen, deren Grundz\"uge \"ubrigens
+im vorstehenden enthalten sind.
+
+1) $p = 3, q = 2, n = 2, m = m' = 4$.
+
+Mit $m$ und $m'$ sind dabei die Ordnungen der Kurven $C$ und
+$C'$ bezeichnet. $C$ hat keinen Doppelpunkt, $C'$ hat einen
+Doppelpunkt. \textit{Von den 28 Doppeltangenten von $C$ gehen
+sechs durch einen Punkt au{\ss}erhalb der Kurve}.
+
+2) $p = 4, q = 2, n = 2, m = 4, m' = 5$.
+
+$C$ hat zwei Doppelpunkte, $C'$ nur einen. Setzt man die
+Differentiale der reduziblen Integrale erster Gattung gleich
+Null, so erh\"alt man ein \textit{Kegelschnittb\"uschel}, dessen
+vier Basispunkte von den beiden Doppelpunkten von $C$ und zwei
+weiteren Punkten derselben Kurve gebildet werden. Sechs dieser
+Kegelschnitte ber\"uhren $C$ doppelt. Derjenige derselben, der
+$C$ in einem Basispunkte ber\"uhrt, oskuliert daselbst.
+
+3) $p = 2, q = 1, n = 2$.
+
+Die Kurve $C$ ist ein \textit{Vielfaches von zwei verschiedenen}
+Kurven $C'$ und $C''$. Es existiert eine \textsc{Fuchs}sche
+Gruppe $G$, zu der man sowohl ein erstes Polygon $P_1$
+konstruieren kann, das aus zwei Polygonen einer zu $C'$
+geh\"origen Gruppe $G'$ besteht, als auch ein zweites Polygon
+$P_2$, das aus zwei Polygonen einer zu $C''$ geh\"origen Gruppe
+$G''$ besteht. $G$ ist also sowohl in $G'$ als in $G''$ als
+Untergruppe vom Index $2$ enthalten. Die nebenstehende
+schematische \textit{Figur} m\"oge zur Veranschaulichung der
+Verh\"altnisse dienen. Die beiden eben erw\"ahnten
+Fundamentalbereiche $P_1$ und $P_2$ von $G$ sind durch die
+Polygone mit den Ecken $A$ bzw.~$C$ dargestellt. Jedes derselben
+zerf\"allt in zwei Sechsecke, die bzw.~Fundamentalbereiche von
+$G'$ oder $G''$ sind. Um die \"Aquivalenz von $P_1$ und $P_2$
+besser hervortreten zu lassen, sind die Symmetriezentren der
+erw\"ahnten Sechsecke mit den Seitenmitten verbunden, soda{\ss}
+alle Polygone sich in leicht ersichtlicher Weise aus den so
+entstehenden Vierecken aufbauen.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics*[scale=0.3]{fig5.png}
+\end{center}
+\end{figure}
+
+Ich gehe nun zu den S\"atzen aus der Geometrie der algebraischen
+Kurven \"uber, die uns dieses Beispiel lehrt. Wenn ich auf $C'$
+einen Punkt $M'$ markiere, so entsprechen diesem zwei Punkte
+$M_a$ und $M_b$ auf $C$. Jedem von diesen entspricht ein Punkt
+von $C''$: ${M_a}''$, ${M_b}''$. Es entsprechen also im
+allgemeinen jedem Punkte von $C'$ zwei Punkte von $C''$. Ebenso
+kann man schlie{\ss}en, da{\ss} im allgemeinen jedem Punkte von
+$C''$ zwei Punkte von $C'$ entsprechen. Die Korrespondenz $(C',
+C)$ hat aber zwei Verzweigungspunkte ${M_1}'$, ${M_2}'$. Jedem
+von ihnen entspricht also nur ein Punkt von $C$ und also auch
+nur ein Punkt von $C''$: ${M_1}''$, ${M_2}''$. Ebenso hat die
+Korrespondenz $(C'', C)$ zwei Verzweigungspunkte ${N_1}''$,
+${N_2}''$. Jedem von ihnen ist nur ein Punkt von $C'$
+zugeordnet: ${N_1}'$, ${N_2}'$. Wir k\"onnen dann den ersten
+Satz, den wir anf\"uhren wollen, so aussprechen:
+
+\textit{${N_1}'$ und ${N_2}'$ einerseits und ${M_1}''$ und
+${M_2}''$ andererseits fallen zusammen.}
+
+Ich gehe zum zweiten Satz \"uber, der sich ergibt, wenn man $C'$
+und $C''$ als Kurven dritter Ordnung voraussetzt.
+
+\textit{Ich kann in ${N_1}' = {N_2}'$ die Tangente an $C'$
+ziehen. Ich verbinde ferner ${M_1}'$ und ${M_2}'$ durch eine
+Sekante. Diese beiden Geraden schneiden sich auf $C'$. Ebenso
+kann ich in ${M_1}'' = {M_2}''$ die Tangente an $C''$ ziehen und
+mit der Sekante ${N_1}''{N_2}''$ zum Schnitt bringen. Der
+Schnittpunkt liegt auf $C''$.}
+
+Diese wenigen Beispiele lassen zur Gen\"uge erkennen, wie zahlreich 
+die besonderen F\"alle sind.
+
+\newpage
+
+\begin{center}
+\bigskip\bigskip\bigskip\label{fuenfter}
+{\Large F\"unfter Vortrag}
+
+\bigskip\bigskip\bigskip
+{\Large \"UBER TRANSFINITE ZAHLEN}
+\end{center}
+
+\newpage
+
+Meine Herren! Ich will heute \"uber den Begriff der transfiniten
+Kardinalzahl \label{transfinite} vor Ihnen sprechen; und zwar
+will ich zun\"achst von einem \textit{scheinbaren} Widerspruch
+reden, den dieser Begriff enth\"alt. Dazu schicke ich folgendes
+voraus: meiner Ansicht nach ist ein Gegenstand nur dann denkbar,
+wenn er sich mit einer endlichen Anzahl von Worten definieren
+l\"a{\ss}t. Einen Gegenstand, der in diesem Sinne endlich
+definierbar ist, will ich zur Abk\"urzung einfach
+``definierbar'' \label{definierbar} nennen. Demnach ist also ein
+nicht definierbarer Gegenstand auch undenkbar. Desgleichen will
+ich ein Gesetz ``aussagbar''\label{aussagbar} nennen, wenn es in
+einer endlichen Anzahl von Worten ausgesagt werden kann.
+
+Herr \textsc{Richard}\label{Richard} hat nun bewiesen, da{\ss}
+die Gesamtheit der definierbaren Gegenst\"ande abz\"ahlbar ist,
+d.~h.~da{\ss} die Kardinalzahl dieser Gesamtheit $\aleph_0$ ist.
+Der Beweis ist ganz einfach: sei $\alpha$ die Anzahl der
+W\"orter des W\"orterbuches, dann kann man mit $n$ W\"ortern
+h\"ochstens $\alpha^n$ Gegenst\"ande definieren. L\"a{\ss}t man
+nun $n$ \"uber alle Grenzen wachsen, so sieht man, da{\ss} man
+nie \"uber eine abz\"ahlbare Gesamtheit hinauskommt. Die
+M\"achtigkeit der Menge der denkbaren Gegenst\"ande w\"are also
+$\aleph_0$. Herr \textsc{Schoenflies}\label{Schoenflies} hat
+gegen diesen Beweis eingewandt, da{\ss} man mit einer einzigen
+Definition mehrere, ja sogar unendlich viele Gegenst\"ande
+definieren k\"onne. Als Beispiel f\"uhrt er die Definition der
+konstanten Funktionen an, deren es offenbar unendlich viele
+gibt. Dieser Einwand ist deshalb unzul\"assig, weil durch solche
+Definitionen gar nicht die einzelnen Gegenst\"ande, sondern ihre
+Gesamtheit, in unserem Beispiel also die \textit{Menge} der
+konstanten Funktionen definiert wird, und diese ist ein einziger
+Gegenstand. Der Einwand von Herrn \textsc{Schoenflies} ist also
+nicht stichhaltig.
+
+Nun hat bekanntlich \textsc{Cantor}\label{Cantor} bewiesen,
+da{\ss} das Kontinuum nicht abz\"ahlbar ist; dies widerspricht
+dem Beweise von \textsc{Richard}. Es fragt sich also, welcher
+von beiden Beweisen richtig ist. Ich behaupte, sie sind beide
+richtig, und der Widerspruch ist nur ein scheinbarer. Zur
+Begr\"undung dieser Behauptung will ich einen neuen Beweis f\"ur
+den \textsc{Cantor}schen Satz geben: Wir nehmen also an, es sei
+eine Strecke $AB$ gegeben und ein Gesetz, durch welches jedem
+Punkte der Strecke eine ganze Zahl zugeordnet wird. Wir wollen
+der Einfachheit halber die Punkte durch die ihnen zugeordneten
+Zahlen bezeichnen. Wir teilen nun unsere Strecke durch zwei
+beliebige Punkte $A_1$ und $A_2$ in drei Teile, die wir als
+Unterstrecken $1$.~Stufe bezeichnen; diese teilen wir wieder in
+je drei Teile und erhalten Unterstrecken $2$.~Stufe; dieses
+Verfahren denken wir uns ins Unendliche fortgesetzt, wobei die
+L\"ange der Unterstrecken unter jede Grenze sinken soll. Der
+Punkt~$1$ geh\"ort nun einer oder h\"ochstens, wenn er mit $A_1$
+oder $A_2$ zusammenf\"allt, zweien der Unterstrecken erster
+Stufe an, es gibt also sicher eine, der er nicht angeh\"ort. Auf
+dieser suchen wir den Punkt mit der niedrigsten Nummer, die nun
+mindestens $2$ sein mu{\ss}, auf. Unter den $3$ Unterstrecken
+$2$.~Stufe, die zu derjenigen Strecke $1$.~Stufe geh\"oren, auf
+der wir uns befinden, ist nun wieder mindestens eine, der der
+zuletzt betrachtete Punkt nicht angeh\"ort. Auf dieser setzen
+wir das Verfahren fort und erhalten so eine Folge von Strecken,
+die folgende Eigenschaften hat: jede von ihnen ist in allen
+vorhergehenden enthalten, und eine Strecke $n^\text{ter}$ Stufe
+enth\"alt keinen der Punkte $1$ bis $n-1$. Aus der ersten
+Eigenschaft folgt, da{\ss} es mindestens einen Punkt geben
+mu{\ss}, der ihnen allen gemeinsam ist; aus der zweiten
+Eigenschaft folgt aber, da{\ss} die Nummer dieses Punktes
+gr\"o{\ss}er sein mu{\ss} als jede endliche Zahl, d.~h.~es kann
+ihm keine Zahl zugeordnet werden.
+
+Was haben wir nun zu diesem Beweise vorausgesetzt? Wir haben ein
+Gesetz vorausgesetzt, das jedem Punkte der Strecke eine ganze
+Zahl zuordnet. Dann konnten wir einen Punkt definieren, dem
+keine ganze Zahl zugeordnet ist. In dieser Hinsicht
+unterscheiden sich die verschiedenen Beweise dieses Satzes
+nicht. Dazu mu{\ss}te aber das Gesetz zuerst feststehen. Nach
+\textsc{Richard} m\"u{\ss}te anscheinend ein solches Gesetz
+existieren, aber \textsc{Cantor} hat das Gegenteil bewiesen. Wie
+kommen wir aus diesem Dilemma heraus? Fragen wir einmal nach der
+Bedeutung des Wortes ``definierbar''. Wir nehmen die Tafel aller
+endlichen S\"atze und streichen daraus alle diejenigen, die
+keinen Punkt definieren. Die \"Ubrigbleibenden ordnen wir den
+ganzen Zahlen zu. Wenn wir jetzt die Durchmusterung der Tafel
+von neuem vornehmen, so wird es sich im allgemeinen zeigen,
+da{\ss} wir jetzt einige S\"atze stehen lassen m\"ussen, die wir
+vorher gestrichen haben. Denn die S\"atze, in welchen man von
+dem Zuordnungsgesetz selbst sprach, hatten fr\"uher keine
+Bedeutung, da die Punkte den ganzen Zahlen noch nicht zugeordnet
+waren. Diese S\"atze haben jetzt eine Bedeutung, und m\"ussen in
+unserer Tafel bleiben. W\"urden wir jetzt ein neues
+Zuordnungsgesetz aufstellen, so w\"urde sich dieselbe
+Schwierigkeit wiederholen und so ad infinitum. Hierin liegt aber
+die L\"osung des scheinbaren Widerspruchs zwischen
+\textsc{Cantor} und \textsc{Richard}. Sei $M_0$ die Menge der
+ganzen Zahlen, $M_1$ die Menge der nach der ersten
+Durchmusterung der Tafel aller endlichen S\"atze definierbaren
+Punkte unserer Strecke, $G_1$ das Gesetz der Zuordnung zwischen
+beiden Mengen. Durch dieses Gesetz kommt eine neue Menge $M_2$
+von Punkten als definierbar hinzu. Zu $M_1+M_2$ geh\"ort aber
+ein neues Gesetz $G_2$, dadurch entsteht eine neue Menge $M_3$
+usw. \textsc{Richard}s Beweis lehrt nun, da{\ss}, wo ich auch
+das Verfahren abbreche, immer ein Gesetz existiert, w\"ahrend
+\textsc{Cantor} beweist, da{\ss} das Verfahren beliebig weit
+fortgesetzt werden kann. Es besteht also kein Widerspruch
+zwischen beiden.
+
+Der Schein eines solchen r\"uhrt daher, da{\ss} dem
+Zuordnungsgesetz von \textsc{Richard} eine Eigenschaft fehlt,
+die ich mit einem von den englischen Philosophen entlehnten
+Ausdruck als ``pr\"adikativ'' \label{praedikativ} bezeichne.
+(Bei \textsc{Russell},\label{Russell} dem ich das Wort entlehne,
+ist eine Definition zweier Begriffe $A$ und $A'$ nicht
+pr\"adikativ, wenn $A$ in der Definition von $A'$ und umgekehrt
+vorkommt.) Ich verstehe darunter folgendes: Jedes
+Zuordnungsgesetz setzt eine bestimmte Klassifikation voraus. Ich
+nenne nun eine Zuordnung pr\"adikativ, wenn die zugeh\"orige
+Klassifikation pr\"adikativ ist. Eine Klassifikation aber nenne
+ich pr\"adikativ, wenn sie durch Einf\"uhrung neuer Elemente
+nicht ver\"andert wird. Dies ist aber bei der
+\textsc{Richard}schen nicht der Fall, vielmehr \"andert die
+Einf\"uhrung des Zuordnungsgesetzes die Einteilung der S\"atze
+in solche, die eine Bedeutung haben, und solche, die keine
+haben. Was hier mit dem Wort ``pr\"adikativ'' gemeint ist,
+l\"a{\ss}t sich am besten an einem Beispiel illustrieren: wenn
+ich eine Menge von Gegenst\"anden in eine Anzahl von Schachteln
+einordnen soll, so kann zweierlei eintreten: entweder sind die
+bereits eingeordneten Gegenst\"ande endg\"ultig an ihrem Platze,
+oder ich mu{\ss} jedesmal, wenn ich einen neuen Gegenstand
+einordne, die anderen oder wenigstens einen Teil von ihnen
+wieder herausnehmen. Im ersten Falle nenne ich die
+Klassifikation pr\"adikativ, im zweiten nicht. Ein gutes
+Beispiel f\"ur eine nicht pr\"adikative Definition hat
+\textsc{Russell} gegeben: $A$ sei die kleinste ganze Zahl, deren
+Definition mehr als hundert deutsche Worte erfordert. $A$
+mu{\ss} existieren, da man mit hundert Worten jedenfalls nur
+eine endliche Anzahl von Zahlen definieren kann. Die Definition,
+die wir eben von dieser Zahl gegeben haben, enth\"alt aber
+weniger als hundert Worte. Und die Zahl $A$ ist also
+\textit{definiert} als \textit{undefinierbar}.
+
+\textsc{Zermelo}\label{Zermelo} hat nun gegen die Verwerfung der
+nicht pr\"adikativen Definitionen den Einwand erhoben, da{\ss}
+damit auch ein gro{\ss}er Teil der Mathematik hinf\"allig
+w\"urde, z.~B.\ der Beweis f\"ur die Existenz einer Wurzel einer
+algebraischen Gleichung.\label{Wurzeln}
+
+Dieser Beweis lautet bekanntlich folgenderma{\ss}en:
+
+Gegeben ist eine Gleichung $F(x) = 0$. Man beweist nun, da{\ss}
+$\left|F(x)\right|$ ein Minimum haben mu{\ss}; sei $x_0$ einer
+der Argumentwerte, f\"ur den das Minimum eintritt, also
+\[
+\left| F(x) \right| \geq \left| F(x_0) \right|
+\]
+Daraus folgt dann weiter, da{\ss} $F(x_0) = 0$ ist. Hier ist nun
+die Definition von $F(x_0)$ nicht pr\"adikativ, denn dieser Wert
+h\"angt ab von der Gesamtheit der Werte von $F(x)$, zu denen er
+selbst geh\"ort.
+ 
+Die Berechtigung dieses Einwandes kann ich nicht zugeben. Man
+kann den Beweis so umformen, da{\ss} die nicht pr\"adikative
+Definition daraus verschwindet. Ich betrachte zu diesem Zwecke
+die Gesamtheit der Argumente von der Form $\frac{m+ni}{p}$, wo
+$m$, $n$, $p$ ganze Zahlen sind. Dann kann ich dieselben
+Schl\"usse wie vorher ziehen, aber der Argumentwert, f\"ur den
+das Minimum von $\left|F(x)\right|$ eintritt, geh\"ort im
+allgemeinen nicht zu den betrachteten. Dadurch ist der Zirkel im
+Beweise vermieden. Man kann von jedem mathematischen Beweise
+verlangen, da{\ss} die darin vorkommenden Definitionen usw.\
+pr\"adikativ sind, sonst w\"are der Beweis nicht streng.
+
+Wie steht es nun mit dem klassischen Beweise des
+\textsc{Bernstein}schen\label{Bernstein} Theorems? Ist er
+einwandfrei? Das Theorem sagt bekanntlich aus, da{\ss}, wenn
+drei Mengen $A$, $B$, $C$ gegeben sind, wo $A$ in $B$ und $B$ in
+$C$ enthalten ist, und wenn $A$ \"aquivalent $C$ ist, auch $A$
+\"aquivalent $B$ sein mu{\ss}. Es handelt sich also auch hier um
+ein Zuordnungsgesetz.  Wenn das erste Zuordnungsgesetz (zwischen
+$A$ und $C$) pr\"adikativ ist, so zeigt der Beweis, da{\ss} es
+auch ein pr\"adikatives Zuordnungsgesetz zwischen $A$ und $B$
+geben mu{\ss}.
+
+Was nun die zweite transfinite Kardinalzahl $\aleph_1$ betrifft,
+so bin ich nicht ganz \"uberzeugt, da{\ss} sie existiert. Man
+gelangt zu ihr durch Betrachtung der Gesamtheit der
+Ordnungszahlen von der M\"achtigkeit $\aleph_0$; es ist klar,
+da{\ss} diese Gesamtheit von h\"oherer M\"achtigkeit sein
+mu{\ss}. Es fragt sich aber, ob sie abgeschlossen ist, ob wir
+also von ihrer M\"achtigkeit ohne Widerspruch sprechen d\"urfen.
+Ein aktual Unendliches gibt es jedenfalls nicht.
+
+Was haben wir von dem ber\"uhmten \textit{Kontinuumproblem}
+\label{Kontinuum} zu halten? Kann man die Punkte des Raumes
+wohlordnen? Was meinen wir damit? Es sind hier zwei F\"alle
+m\"oglich: entweder behauptet man, da{\ss} das Gesetz der
+Wohlordnung endlich aussagbar ist, dann ist diese Behauptung
+nicht bewiesen; auch Herr \textsc{Zermelo} erhebt wohl nicht den
+Anspruch, eine solche Behauptung bewiesen zu haben. Oder aber
+wir lassen auch die M\"oglichkeit zu, da{\ss} das Gesetz nicht
+endlich aussagbar ist. Dann kann ich mit dieser Aussage keinen
+Sinn mehr verbinden, das sind f\"ur mich nur leere Worte. Hier
+liegt die Schwierigkeit. Und das ist wohl auch die Ursache f\"ur
+den Streit \"uber den fast genialen Satz \textsc{Zermelos}.
+Dieser Streit ist sehr merkw\"urdig:  die einen verwerfen das
+Auswahlpostulat,\label{Auswahlpostulat} halten aber den Beweis
+f\"ur richtig, die anderen nehmen das Auswahlpostulat an,
+erkennen aber den Beweis nicht an.
+
+Doch ich k\"onnte noch manche Stunde dar\"uber sprechen, ohne
+die Frage zu l\"osen.
+
+\newpage
+
+\begin{center}
+\bigskip\bigskip\bigskip\label{sechster}
+{\Large Sechster Vortrag}
+
+\selectlanguage{french}
+\bigskip\bigskip\bigskip
+{\Large LA M\'ECANIQUE NOUVELLE}
+\end{center}
+
+\newpage
+
+Mesdames, messieurs!
+
+Aujourd'hui, je suis oblig\'e de parler fran\c{c}ais, et il faut
+que je m'en excuse. Il est vrai que dans mes pr\'ec\'edentes
+conf\'erences je me suis exprim\'e en allemand, en un tr\`es
+mauvais allemand: parler les langues \'etrang\`eres, voyez-vous,
+c'est vouloir marcher lorsqu'on est boiteux; il est n\'ecessaire
+d'avoir des b\'equilles; mes b\'equilles, c'\'etaient jusqu'ici
+les formules math\'ematiques et vous ne sauriez vous imaginer
+quel appui elles sont pour un orateur qui ne se sent pas tr\`es
+solide. --- Dans la conf\'erence de ce soir, je ne veux pas user
+de formules, je suis sans b\'equilles, et c'est pourquoi je dois
+parler fran\c{c}ais.
+
+En ce monde, vous le savez, il n'est rien de d\'efinitif, rien
+d'immuable; les empires les plus puissants, les plus solides, ne
+sont pas \'eternels: c'est l\`a un th\`eme que les orateurs
+sacr\'es se sont plu bien souvent \`a d\'evelopper. --- Les
+th\'eories scientifiques sont comme les empires, elles ne sont
+pas assur\'ees du lendemain. Si l'une d'elles semblait \`a
+l'abri des injures du temps, c'\'etait, certes, la m\'ecanique
+newtonienne: elle paraissait incontest\'ee, c'\'etait un
+monument imp\'erissable; et voil\`a qu'\`a son tour, je ne dirai
+pas que le monument est par terre, ce serait pr\'ematur\'e, mais
+en tout cas il est fortement \'ebranl\'e. Il est soumis aux
+attaques de grands d\'emolisseurs: vous en avez un parmi vous,
+M. Max \textsc{Abraham},\label{Abraham} un autre est le
+physicien hollandais M. \textsc{Lorentz}.\label{Lorentz} Je
+voudrais, en quelques mots, vous parler des ruines de l'ancien
+\'edifice et du nouveau b\^atiment que l'on veut \'elever \`a
+leur place. ---
+
+Tout d'abord qu'est-ce qui caract\'erisait l'ancienne
+m\'ecanique? C'\'etait ce fait tr\`es simple: je consid\`ere un
+corps en repos, je lui communique une impulsion, c'est \`a dire
+je fais agir sur lui, pendant un temps donn\'e une force
+donn\'ee; le corps se met en mouvement, acquiert une certaine
+vitesse; le corps \'etant anim\'e de cette vitesse, faisons agir
+encore la m\^eme force pendant le m\^eme temps, la vitesse sera
+doubl\'ee; si nous continuons encore, la vitesse sera tripl\'ee
+apr\`es que nous aurons une troisi\`eme fois donn\'e une impulsion
+identique. Recommen\c{c}ons ainsi un nombre suffisant de fois,
+le corps finira par acqu\'erir une vitesse tr\`es grande, qui
+pourra d\'epasser toute limite, une vitesse infinie.
+
+Dans la nouvelle m\'ecanique, au contraire, on suppose qu'il est
+impossible de communiquer \`a un corps partant du repos une
+vitesse sup\'erieure \`a celle de la lumi\`ere. Que se
+passe-t-il? Je consid\`ere le m\^eme corps au repos; je lui
+donne une premi\`ere impulsion, la m\^eme que pr\'ec\'edemment,
+il prendra la m\^eme vitesse; renouvelons une seconde fois cette
+impulsion, la vitesse va encore augmenter, mais elle ne sera
+plus doubl\'ee; une troisi\`eme impulsion produira un effet
+analogue, la vitesse augmente mais de moins en moins, le corps
+oppose une r\'esistance qui devient de plus en plus grande.
+Cette r\'esistance, c'est l'inertie, c'est ce qu'on appelle
+commun\'ement la masse; tout ce passe alors dans cette nouvelle
+m\'ecanique comme si la masse n'\'etait pas constante, mais
+croissait avec la vitesse. Nous pouvons repr\'esenter
+graphiquement les ph\'enom\`enes: dans l'ancienne m\'ecanique,
+le corps prend apr\`es la premi\`ere impulsion une vitesse
+represent\'ee par le segment $\overline{O\nu_1}$; apr\`es la
+deuxi\`eme impulsion $\overline{O\nu_1}$ s'accro{\^\i}t d'un
+segment $\overline{\nu_1\nu_2}$ qui lui est \'egal, \`a chaque
+nouvelle impulsion, la vitesse s'accro{\^\i}t de la m\^eme
+quantit\'e, le segment qui la repr\'esente s'accro{\^\i}t d'une
+longueur constante;  dans la nouvelle m\'ecanique, le segment
+vitesse s'accro{\^\i}t de segments $\overline{\nu_1'\nu_2}$,
+$\overline{\nu_2'\nu_3'}, \ldots$ qui sont de plus en plus
+petits et tels que nous ne pouvons pas d\'epasser une certaine
+limite, la vitesse de la lumi\`ere.
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics*[scale=0.3]{fig6.png}
+\end{center}
+\end{figure}
+
+Comment a-t-on \'et\'e conduit \`a de telles conclusions? A-t-on
+fait des ex\-p\'eriences directes? Les divergences ne se
+produiront que pour les corps anim\'es de grandes vitesses;
+c'est alors seulement que les diff\'erences signal\'ees
+deviennent sensibles. Mais, qu'est-ce qu'une tr\`es grande
+vitesse? Est-ce celle d'une automobile qui fait 100 kilom\`etres
+\`a l'heure; on s'extasie dans la rue sur une telle rapidit\'e;
+\`a notre point de vue, c'est pourtant bien peu, une vitesse
+d'escargot. L'astronomie nous donne mieux:
+Mercure,\label{Mercur1} le plus rapide des corps c\'elestes
+parcourt lui aussi 100 kilom\`etres environ, non plus \`a
+l'heure mais \`a la seconde: pourtant, cela ne suffit pas
+encore, de telles vitesses sont trop faibles pour r\'ev\'eler
+les diff\'erences que nous voudrions observer. Je ne parle pas
+de nos boulets de canon, ils sont plus rapides que les
+automobiles, mais beaucoup plus lents que Mercure; vous savez
+cependant qu'on a d\'ecouvert une artillerie dont les
+projectiles sont beaucoup plus vite: je veux parler du radium
+qui envoie dans tous les sens de l'\'energie, des projectiles;
+la rapidit\'e du tir est bien plus grande, la vitesse initiale
+est de $100\,000$ kilom\`etres par seconde, le tiers de la
+vitesse de la lumi\`ere; le calibre des projectiles, leur poids,
+sont, il est vrai, bien plus faibles et nous ne devons pas
+compter sur cette artillerie pour augmenter la puissance
+militaire de nos arm\'ees. Peut-on exp\'erimenter sur ces
+projectiles? De telles exp\'eriences ont \'et\'e effectivement
+tent\'ees; sous l'influence d'un champ \'electrique, d'un champ
+magn\'etique il se produit une d\'eviation qui permet de se
+rendre compte de l'inertie et de la mesurer. On a constat\'e
+ainsi que la masse d\'epend de la vitesse et \'enoncer cette
+loi: L'inertie d'un corps cro{\^\i}t avec sa vitesse qui reste
+inf\'erieure \`a celle de la lumi\`ere, $300\,000$ kilom\`etres
+par seconde.
+
+Je passe maintenant au deuxi\`eme principe, le principe de
+relativit\'e.  Je suppose un observateur qui se d\'eplace vers
+la droite; tout se passe pour lui comme s'il \'etait au repos,
+les objets qui l'entourent se d\'epla\c{c}ant vers la gauche:
+aucun moyen ne permet de savoir si les objets se d\'eplacent
+r\'eellement, si l'observateur est immobile ou en mouvement. On
+l'enseigne dans tous les cours de m\'ecanique, le passager sur
+le bateau croit voir le rivage du fleuve se d\'eplacer, tandis
+qu'il est doucement entra{\^\i}n\'e par le mouvement du navire.
+Examin\'ee de plus pr\`es, cette simple notion acquiert une
+importance capitale; on n'a aucun moyen de trancher la question,
+aucune experience ne peut mettre en defaut le principe: il n'y a
+pas d'espace absolu, tous les d\'eplacements que nous pouvons
+observer sont des deplacements relatifs. Ces considerations bien
+famili\`eres aux philosophes, j'ai eu quelquefois l'occasion de
+les exprimer: j'en ai m\^eme recueilli une publicit\'e dont je
+me serais volontiers pass\'e, tous les journaux r\'eactionnaires
+fran\c{c}ais m'ont fait d\'emontrer que le soleil tournait
+autour de la terre; dans le fameux proc\`es entre l'Inquisition et
+Galil\'ee,\label{Galilei} Galil\'ee aurait eu tous les torts.
+
+Revenons \`a l'ancienne m\'ecanique: elle admettait le principe de
+relativit\'e; au lieu d'\^etre fond\'ees sur des exp\'eriences,
+ses lois \'etaient d\'eduites de ce principe fondamental. Ces
+considerations suffisaient pour les ph\'enom\`enes purement
+m\'ecaniques, mais cela n'allait plus pour d'importantes parties
+de la physique, l'optique par exemple. On consid\'erait comme
+absolue la vitesse de la lumi\`ere relativement \`a l'\'ether:
+cette vitesse pouvait \^etre mesur\'ee, on avait th\'eoriquement
+le moyen de comparer le d\'eplacement d'un mobile \`a un
+deplacement absolu, le moyen de d\'ecider si oui ou non un corps
+\'etait en mouvement absolu.
+
+Des exp\'eriences d\'elicates, des appareils extr\^emement
+pr\'ecis, que je ne d\'ecrirai pas devant vous, ont permis
+d'essayer la r\'ealisation pratique d'une pareille comparaison:
+le r\'esultat a \'et\'e nul. Le principe de r\'elativite n'admet
+aucune restriction dans la nouvelle m\'ecanique; il a, si j'ose
+ainsi dire, une valeur absolue.
+
+Pour comprendre le r\^ole que joue le principe de relativit\'e
+dans la Nouvelle M\'ecanique, nous sommes d'abord amen\'es \`a
+parler du temps apparent,\label{tempsapparent} une invention
+fort ing\'enieuse du physicien \textsc{Lorentz}. Nous supposons
+deux observateurs l'un $A$ \`a Paris, l'autre $B$ \`a Berlin.
+$A$ et $B$ ont des chronom\`etres identiques et veulent les
+r\'egler: mais ce sont des observateurs m\'eticuleux comme il
+n'y en a gu\`ere; ils exigent dans leur r\'eglage une
+extraordinaire exactitude: ce sera, par exemple, non une
+seconde, mais un milliardi\`eme de seconde. Comment pourront-ils
+faire? De Paris \`a Berlin, $A$ envoie un signal
+t\'el\'egraphique, avec un sans-fil, si vous voulez, pour \^etre
+tout \`a fait moderne.  $B$ note le moment de la r\'eception et
+ce sera pour les deux chronom\`etres l'origine des temps. Mais
+le signal emploie un certain temps pour aller de Paris \`a
+Berlin, il ne va qu'avec la vitesse de la lumi\`ere; la montre
+de $B$ serait donc en retard; $B$ est trop intelligent pour ne
+point s'en rendre compte; il va rem\'edier a cet inconvenient.
+La chose semble bien simple: on cro{\^\i}se les signaux, $A$
+re\c{c}oit et $B$ envoie, on prend la moyenne des corrections
+ainsi faites, on a l'heure exacte. Mais cela est-il bien
+certain? Nous supposons que de $A$ \`a $B$ le signal emploie le
+m\^eme temps que pour aller de $B$ \`a $A$. Or $A$ et $B$ sont
+emport\'es dans le mouvement de la terre par rapport \`a
+l'\'ether, v\'ehicule des ondes \'electriques. Quand $A$ a
+envoy\'e son signal il fuit devant lui, $B$ s'\'eloigne de
+m\^eme, le temps employ\'e sera plus long que si les deux
+observateurs \'etaient au repos; si au contraire c'est $B$ qui
+envoie, $A$ qui re\c{c}oit, le temps est plus court parce que
+$A$ va au devant des signaux; il leur est absolument impossible
+de savoir si leurs chronom\`etres marquent ou non la m\^eme
+heure. Quelle que soit la m\'ethode employ\'ee les
+inconv\'enients restent les m\^emes l'observation d'un
+ph\'enom\`ene astronomique, une m\'ethode optique quelconque se
+heurtent aux m\^emes difficult\'es, $B$ ne pourra jamais
+conna{\^\i}tre qu'une diff\'erence apparente de temps, qu'une
+esp\`ece d'heure locale. Le principe de relativit\'e s'applique
+int\'egralement.
+
+Dans l'ancienne m\'ecanique pourtant, on d\'emontrait avec ce
+principe toutes les lois fondamentales. On pourrait \^etre
+tent\'e de reprendre les raisonnements classiques et de
+raisonner comme il suit? Soit encore deux observateurs, $A$ et
+$B$ pour les nommer comme on nomme toujours deux observateurs en
+math\'emati\-ques; supposons les en mouvement, s'\'eloignant l'un
+de l'autre; aucun d'eux ne peut d\'epasser la vitesse de la
+lumi\`ere; par exemple $B$ sera anim\'e de $200\,000$
+kilom\'etres vers la droite, $A$ de $200\,000$ vers la gauche.
+$A$ peut se croire au repos et la vitesse apparente de $B$ sera,
+pour lui, $400\,000$ kilom\`etres.  Si $A$ connait la
+m\'ecanique nouvelle il se dira: $B$ a une vitesse qu'il ne peut
+atteindre, c'est donc que moi aussi je suis en mouvement. Il
+semble qu'il pourrait d\'ecider de sa situation absolue. Mais il
+faudrait qu'il puisse observer le mouvement de $B$ lui meme;
+pour faire cette observation $A$ et $B$ commencent par r\`egler
+leurs montres, puis $B$ envoie \`a $A$ des t\'el\'egrammes pour
+lui indiquer ses positions successives; en les r\'eunissant $A$
+peut se rendre compte du mouvement de $B$ et tracer la courbe de
+ce mouvement. Or les signaux se propagent avec la vitesse de la
+lumi\`ere; les montres qui marquent le temps apparent varient
+\`a chaque instant et tout se passera comme si la montre de $B$
+avan\c{c}ait. $B$ croira aller beaucoup moins vite et la vitesse
+apparente qu'il aura relativement \`a $A$ ne d\'epassera pas la
+limite qu'elle ne doit pas atteindre. Rien ne pourra r\'ev\'eler
+\`a $A$ s'il est en mouvement ou en repos absolu.
+
+Il faut encore faire une troisi\`eme hypoth\`ese beaucoup plus
+surprenante, beaucoup plus difficile \`a admettre, qui g\^ene
+beaucoup nos habitudes actuelles. Un corps en mouvement de
+translation subit une d\'eformation dans le sens m\^eme o\`u il
+se d\'eplace; une sph\`ere, par exemple, devient comme une
+esp\`ece d'ellipso{\"\i}de aplati dont le petit axe serait
+parall\`ele \`a la translation. Si l'on ne s'aper\c{c}oit pas
+tous les jours d'une transformation pareille c'est qu'elle est
+d'une petitesse qui la rend presque imperceptible. La terre,
+emport\'ee dans sa r\'evolution sur son orbite se d\'eforme
+environ de $\frac{1}{200\,000\,000}$: pour observer un pareil
+ph\'enom\`ene il faudrait des instruments de mesure d'une
+pr\'ecision extr\^eme, mais leur pr\'ecision serait infinie
+qu'on n'en serait pas plus avanc\'e car emport\'es eux aussi
+dans le mouvement ils subiront la m\^eme transformation. On ne
+s'apercevra de rien; le m\`etre que l'on pourrait employer
+deviendra plus court comme la longueur qu'on mesure. On ne peut
+savoir quelque chose qu'en comparant \`a la vitesse de la
+lumi\`ere la longueur de l'un de ces corps. Ce sont l\`a de
+delicates experiences, r\'ealis\'ees par \textsc{Michelson}
+\label{Michelson} et dont je ne vous exposerai pas le d\'etail;
+elles ont donn\'e des resultats tout \`a fait remarquables;
+quelqu'\'etranges qu'il nous paraissent, il faut admettre que la
+troisi\`eme hypoth\`ese est parfaitement v\'erifi\'ee.
+
+Telles sont les bases de la nouvelle m\'ecanique, avec l'appui
+de ces hypoth\`eses on trouve qu'elle est compatible avec le
+principe de relativit\'e.
+
+Mais il faut la rattacher alors \`a une conception nouvelle de la
+mati\`ere.
+
+Pour le physicien moderne, l'atome n'est plus l'\'el\'ement
+simple; il est devenu un v\'eritable univers dans lequel des
+milliers de plan\`etes gravitent autour de soleils minuscules.
+Soleils et plan\`etes sont ici des particules
+\textit{\'electris\'ees} soit n\'egativement soit positivement;
+le physicien les appelle \textit{\'electrons}\label{Elektronen}
+et b\^atit le monde avec elles. D'aucuns se repr\'esentent
+l'atome neutre comme une masse centrale positive autour de
+laquelle circulent un grand nombre d'\'electrons charg\'es
+n\'egativement, dont la masse \'electrique totale est \'egale en
+grandeur \`a celle du noyau central.
+
+Cette conception de la mati\`ere permet de rendre compte
+ais\'ement de l'aug\-mentation de la masse d'un corps avec sa
+vitesse, dont nous avons fait un des caract\`eres de la
+m\'ecanique nouvelle. Un corps quelconque n'\'etant qu'un
+assemblage d'\'electrons, il nous suffira de le montrer sur ces
+derniers. Remarquons, \`a cet effet, qu'un \'electron isol\'e se
+d\'epla\c{c}ant \`a travers l'\'ether engendre un courant
+\'electrique, c'est-\`a-dire un champ \'electromagn\'etique. Ce
+champ correspond \`a une certaine quantit\'e d'\'energie
+localis\'ee non dans l'\'electron, mais dans l'\'ether. Une
+variation en grandeur ou en direction de la vitesse de
+l'\'electron modifie le champ et se traduit par une variation de
+l'\'energie \'electromagn\'etique de l'\'ether. Alors que dans
+la m\'ecanique newtonienne la d\'epense d'\'energie n'est due
+qu'\`a l'inertie du corps en mouvement, ici une partie de cette
+d\'epense est due \`a ce que l'on peut appeler l'inertie de
+l'\'ether relativement aux forces \'electromagn\'etiques.
+L'inertie de l'\'ether augmente avec la vitesse et sa limite
+devient infinie lorsque la vitesse tend vers la vitesse de la
+lumi\`ere. La masse apparente de l'\'electron augmente donc avec
+la vitesse; les exp\'eriences de \textsc{Kaufmann}
+\label{Kaufmann} montrent que la masse r\'eelle constante de
+l'\'electron est n\'egligeable par rapport \`a la masse
+apparente et peut \^etre consid\'er\'ee comme nulle.
+
+Dans cette nouvelle conception, la masse constante de la
+mati\`ere a disparu. L'\'ether seul, et non plus la mati\`ere,
+est inerte. Seul l'\'ether oppose une r\'esistance au mouvement,
+si bien que l'on pourrait dire: il n'y a pas de mati\`ere, il
+n'y a que des trous dans l'\'ether. Pour les mouvements
+stationnaires ou quasi-stationnaires, la m\'ecanique nouvelle ne
+diff\`ere pas --- au degr\'e d'approximation de nos mesures
+pr\`es --- de la m\'ecanique newtonienne, avec cette seule
+diff\'erence que la masse n'est plus ind\'ependante ni de la
+vitesse, ni de l'angle que fait cette vitesse avec la direction
+de la force acc\'el\'eratrice. Si par contre la vitesse a une
+acc\'el\'eration consid\'erable, dans le cas, par ex.,
+d'oscillations tr\`es rapides, il y a production d'ondes
+hertziennes repr\'esentant une perte d'\'energie de l'\'electron
+entra{\^\i}nant l'amortissement de son mouvement. Ainsi, dans la
+t\'el\'egraphie sans fil, les ondes \'emises sont dues aux
+oscillations des \'electrons dans la d\'echarge oscillante.
+
+Des vibrations analogues ont lieu dans une flamme et de m\^eme
+encore dans un solide incandescent. Pour \textsc{Lorentz}, il
+circule \`a l'int\'erieur d'un corps incandescent un nombre
+consid\'erable d'\'electrons qui, ne pouvant pas en sortir,
+volent dans tous les sens et se r\'efl\'echissent sur sa
+surface. On pourrait les comparer \`a une nu\'ee de moucherons
+enferm\'es dans un bocal et venant frapper de leurs ailes les
+parois de leur prison. Plus la temperature est \'elev\'ee, plus
+le mouvement de ces \'electrons est rapide et plus les chocs
+mutuels et les r\'eflexions sur la paroi sont nombreuses. A
+chaque choc et \`a chaque r\'eflexion une onde
+\'electromagn\'etique\label{ondeelectrique} est \'emise et c'est
+la perception de ces ondes qui nous fait para{\^\i}tre le corps
+incandescent.
+
+Le mouvement des \'electrons est presque tangible, dans un tube
+de \textsc{Crookes}.\label{Crookes} Il s'y produit un
+v\'eritable bombardement d'\'electrons partant de la cathode.
+Ces rayons cathodiques frappent violemment l'anticathode et s'y
+r\'efl\'echissent en partie donnant ainsi naissance \`a un
+\'ebranlement \'electromagn\'etique que plusieurs physiciens
+identifient avec les rayons \textsc{R\"ontgen}.\label{Roentgen}
+
+Il nous reste en terminant \`a examiner les relations de la
+m\'ecanique nouvelle avec l'astronomie. La notion de masse
+constante d'un corps s'\'evanouissant, que deviendra la loi de
+\textsc{Newton}? Elle ne pourra subsister que pour des corps en
+repos. De plus il faudra tenir compte du fait que l'attraction
+n'est pas instantan\'ee. On peut donc se demander avec raison si
+la m\'ecanique nouvelle ne va r\'eussir qu'\`a compliquer
+l'astronomie sans obtenir une approximation sup\'erieure a celle
+que nous donne la m\'ecanique c\'eleste classique. Mr.
+\textsc{Lorentz} a abord\'e la question. Partant de la loi de
+\textsc{Newton} suppos\'ee vraie pour deux corps \'electris\'es
+au repos, il calcule l'action \'electrodynamique des courants
+engendr\'es par ces corps en mouvement; il obtient ainsi une
+nouvelle loi d'attraction contenant les vitesses des deux corps
+comme param\`etres. Avant d'examiner comment cette loi rend
+compte des ph\'enom\`enes astronomiques, remarquons encore que
+l'acc\'el\'eration des corps c\'elestes a comme cons\'equence un
+rayonnement \'electromagn\'etique, donc une dissipation de
+l'\'energie se faisant ressentir en retour par un amortissement
+de leur vitesse. A la longue, les plan\`etes finiront donc par
+tomber sur le soleil. Mais cette perspective ne peut gu\`ere
+nous effrayer, la catastrophe ne pouvant arriver que dans
+quelques millions de milliards de si\`ecles. Revenant maintenant
+\`a la loi d'attraction, nous voyons ais\'ement que la
+diff\'erence entre les deux m\'ecaniques sera d'autant plus
+grande que la vitesse des plan\`etes sera plus grande. S'il y a
+une diff\'erence appr\'eciable, ce sera donc pour
+Mercure\label{Mercur2} qu'elle sera la plus grande, Mercure
+ayant de toutes les plan\`etes la plus grande vitesse. Or il
+arrive justement que Mercure pr\'esente une anomalie non encore
+expliqu\'ee: le mouvement de son p\'erih\'elie est plus rapide
+que le mouvement calcul\'e par la theorie classique.
+L'acc\'el\'eration est de $38''$ trop grande.
+\textsc{Leverrier}\label{Leverrier} attribua cette anomalie \`a
+une plan\`ete non encore d\'ecouverte et un astronome amateur
+crut observer son passage au soleil. Depuis lors plus personne
+ne l'a vue et il est malheureusement certain que cette plan\`ete
+aper\c{c}ue n'\'etait qu'un oiseau. Or la m\'ecanique nouvelle
+rend bien compte du sens de l'erreur relative \`a Mercure, mais
+elle laisse cependant encore une marge de $32''$ entre elle et
+l'observation. Elle ne suffit donc pas \`a ramener la
+concordance dans la th\'eorie de Mercure. Si ce r\'esultat n'est
+gu\`ere d\'ecisif en faveur de la m\'ecanique nouvelle, il est
+encore moins d\'efavorable \`a son acceptation puisque le sens
+dans lequel elle corrige l'\'ecart de la th\'eorie classique est
+le bon. La th\'eorie des autres plan\`etes n'est pas
+sensiblement modifi\'e dans la nouvelle th\'eorie et les
+r\'esultats co{\"\i}ncident \`a l'approximation des mesures
+pr\`es \`a ceux de la th\'eorie classique.
+
+Pour conclure, il serait pr\'ematur\'e, je crois, malgr\'e la
+grande valeur des arguments et des faits \'erig\'es contre elle,
+de regarder la m\'ecanique classique comme d\'efinitivement
+condamn\'ee. Quoiqu'il en soit d'ailleurs, elle restera la
+m\'ecanique des vitesses tr\`es petites par rapport \`a celle de
+la lumi\`ere, la m\'ecanique donc de notre vie pratique et de
+notre technique terrestre. Si cependant, dans quelques ann\'ees
+sa rivale triomphe, je me permettrai de vous signaler un
+\'ecueil p\'edagogique que n'\'eviteront pas nombre de ma{\^\i}tres,
+en France, tout au moins. Ces ma{\^\i}tres n'auront rien de plus
+press\'e, en enseignant la m\'ecanique \'el\'ementaire \`a leurs
+\'el\`eves, que de leur apprendre que cette m\'ecanique l\`a a
+fait son temps, qu'une m\'ecanique nouvelle o\`u les notions de
+masse et de temps ont une toute autre valeur la remplace; ils
+regarderont de haut cette m\'ecanique p\'erim\'ee que les
+programmes les forcent \`a enseigner et feront sentir \`a leurs
+\'el\`eves le m\'epris qu'ils lui portent. Je crois bien
+cependant que cette m\'ecanique classique d\'edaign\'ee sera
+aussi n\'ecessaire que maintenant et que celui qui ne la
+conna{\^\i}tra pas \`a fond ne pourra comprendre la m\'ecanique
+nouvelle.
+
+\newpage
+
+\selectlanguage{german}
+\section*{Personen- und Sachregister}
+
+$ $
+
+\textbf{A}\\
+\\
+\textsc{Abel}sche Integrale \pageref{AbelscheIntegrale} ff. \\
+---scher Satz \pageref{AbelscherSatz} \\
+\textsc{Abraham} \pageref{Abraham} \\
+aussagbar \pageref{aussagbar} ff. \\
+Auswahlpostulat \pageref{Auswahlpostulat} 
+
+\bigskip
+\textbf{B} \\
+\\
+\textsc{Bernstein} \pageref{Bernstein} \\
+\textsc{Bessel}sche Funktionen \pageref{Bessel} \\
+Breite, kritische geographische \pageref{kritischegeographische} 
+
+\bigskip
+\textbf{C} \\
+\\
+\textsc{Cantor} \pageref{Cantor} ff. \\
+Colatitude \pageref{Colatitude} \\
+\textsc{Crooke}sche R\"ohren \pageref{Crookes} \\
+Curve, algebraische \pageref{algebraischeCurve} \\
+--- Geometrie auf einer solchen \pageref{Geometrie} ff. \\
+--- ihr Geschlecht \pageref{CurveGeschlecht} \\
+--- vielfache einer anderen \pageref{vielfacheCurve} \\
+--- pseudovielfache einer anderen \pageref{pseudovielfacheCurve} 
+
+\bigskip
+\textbf{D} \\
+\\
+definierbar \pageref{definierbar} ff. 
+
+\bigskip
+\textbf{E} \\
+\\
+Elektrizit\"at, Dichte der \pageref{Dichte} \\
+onde \'electrique \pageref{ondeelectrique} \\
+elektrische Verschiebung \pageref{Versch} \\
+Elektronen \pageref{Elektronen} ff. 
+
+\bigskip
+\textbf{F} \\
+\\
+Flutproblem \pageref{Flutproblem} \\
+\textsc{Fourier}sches Integraltheorem \pageref{FourierIntegral} \\
+---sche Reihe \pageref{FourierReihe} \\
+\textsc{Fredholm}sche Methode \pageref{Fredholm1} ff., 
+  \pageref{Fredholm2}, \pageref{Fredholm3}, 15, 26 \\
+\textsc{Fuchs}sche Funktionen \pageref{Fuchs} \\
+Fundamentalbereich \pageref{Fundamentalbereich} 
+
+\bigskip
+\textbf{G} \\
+\\
+\textsc{Galilei} \pageref{Galilei} \\
+\textsc{Green}sche Funktion \pageref{Green} \\
+Grenzkreisgruppe \pageref{Grenzkreisgruppe} 
+
+\bigskip
+\textbf{H} \\
+\\
+\textsc{Hadamard}scher Satz \"uber das Geschlecht ganzer
+Funktionen \pageref{Hadamard} \\
+\textsc{Hilbert} \pageref{Hilbert1}, \pageref{Hilbert2} \\
+\textsc{Hill} \pageref{Hill} 
+
+\bigskip
+\textbf{I} \\
+\\
+Integralgleichung 1.~Art \pageref{Integral1Art} \\
+--- 2. Art \pageref{Integral2Art} 
+
+\bigskip
+\textbf{K} \\
+\\
+\textsc{Kaufmann} \pageref{Kaufmann} \\
+\textsc{Kellogg} \pageref{Kellog} \\
+Kerne, iterierte \pageref{itKerne1}, \pageref{itKerne2}\\
+--- unendliche \pageref{unendlKern1}, \pageref{unendlKern2} \\
+\textsc{Koch}, Helge von --- \pageref{Koch} \\
+Konduktionsstrom \pageref{Konduk} \\
+Korrespondenz auf algebr.~Kurven \pageref{Korrespondenz} \\
+Kontinuumproblem \pageref{Kontinuum} 
+
+\bigskip
+\textbf{L} \\
+\\
+\textsc{Legendre}sche Polynome \pageref{Legendre} \\
+\textsc{Leverrier} \pageref{Leverrier} \\
+Lichtgeschwindigkeit \pageref{Lichtgeschwindig} \\
+lineare Gleichungen mit unendlichvielen Unbekannten \pageref{linGl} \\
+\textsc{Lorentz}, H.\ A. \pageref{Lorentz} \\
+
+
+\bigskip
+\textbf{M} \\
+\\
+magnetische Kraft \pageref{Magnet} \\
+\textsc{Maxwell} \pageref{Maxwell} \\
+Mercur \pageref{Mercur1}, \pageref{Mercur2} \\
+\textsc{Michelson} \pageref{Michelson} 
+
+\bigskip
+\textbf{N} \\
+\\
+nichteuklidische Geometrie \pageref{nichteuklid} ff. 
+
+\bigskip
+\textbf{P} \\
+\\
+Periodentabelle \pageref{Periodentabelle} \\
+\textsc{Picard} \pageref{Picard} \\
+Potential, hydrostatisches \pageref{hydroPot} \\
+--- retardiertes \pageref{retardPot} \\
+--- skalares \pageref{skalaresPot} \\
+pr\"adikative Definitionen \pageref{praedikativ} 
+
+\bigskip
+\textbf{R} \\
+\\
+Reduktionstheorie \textsc{Abel}scher Integrale 
+\pageref{Reduktionstheorie} \\
+\textsc{Richard} \pageref{Richard} ff. \\
+\textsc{R\"ontgen}strahlen \pageref{Roentgen} \\
+\textsc{Russell} \pageref{Russell} 
+
+\bigskip
+\textbf{S} \\
+\\
+\textsc{Schoenflies} \pageref{Schoenflies} \\
+Schwingung, ged\"ampfte synchrone \pageref{synchron} 
+
+\bigskip
+\textbf{T} \\
+\\
+temps apparent  \pageref{tempsapparent} 
+
+\bigskip
+\textbf{W} \\
+\\
+Wurzelexistenzbeweis \pageref{Wurzeln} 
+
+\bigskip
+\textbf{Z} \\
+\\
+Zahlen, charakteristische \pageref{charakteristische} \\
+--- invariante \pageref{invariante} \\
+--- transfinite \pageref{transfinite} \\
+\textsc{Zermelo} \pageref{Zermelo} \\
+\vfill
+
+\newpage
+%\chapter{PROJECT GUTENBERG ``SMALL PRINT''}
+\small 
+\pagenumbering{gobble}
+\begin{verbatim}
+
+*** END OF THIS PROJECT GUTENBERG EBOOK ***
+
+***** This file should be named 15267-t.tex or 15267-t.zip *****
+This and all associated files of various formats will be found in:
+        http://www.gutenberg.org/1/5/2/6/15267/
+
+
+Produced by Joshua Hutchinson, K.F. Creiner and the Online Distributed
+Proofreading Team. This file was produced from images generously made
+available by Cornell University.
+
+
+Updated editions will replace the previous one--the old editions
+will be renamed.
+
+Creating the works from public domain print editions means that no
+one owns a United States copyright in these works, so the Foundation
+(and you!) can copy and distribute it in the United States without
+permission and without paying copyright royalties.  Special rules,
+set forth in the General Terms of Use part of this license, apply to
+copying and distributing Project Gutenberg-tm electronic works to
+protect the PROJECT GUTENBERG-tm concept and trademark.  Project
+Gutenberg is a registered trademark, and may not be used if you
+charge for the eBooks, unless you receive specific permission.  If
+you do not charge anything for copies of this eBook, complying with
+the rules is very easy.  You may use this eBook for nearly any
+purpose such as creation of derivative works, reports, performances
+and research.  They may be modified and printed and given away--you
+may do practically ANYTHING with public domain eBooks.
+Redistribution is subject to the trademark license, especially
+commercial redistribution.
+
+
+
+*** START: FULL LICENSE ***
+
+THE FULL PROJECT GUTENBERG LICENSE PLEASE READ THIS BEFORE YOU
+DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg-tm mission of promoting the free
+distribution of electronic works, by using or distributing this work
+(or any other work associated in any way with the phrase "Project
+Gutenberg"), you agree to comply with all the terms of the Full
+Project Gutenberg-tm License (available with this file or online at
+http://gutenberg.net/license).
+
+
+Section 1.  General Terms of Use and Redistributing Project
+Gutenberg-tm electronic works
+
+1.A.  By reading or using any part of this Project Gutenberg-tm
+electronic work, you indicate that you have read, understand, agree
+to and accept all the terms of this license and intellectual
+property (trademark/copyright) agreement.  If you do not agree to
+abide by all the terms of this agreement, you must cease using and
+return or destroy all copies of Project Gutenberg-tm electronic
+works in your possession. If you paid a fee for obtaining a copy of
+or access to a Project Gutenberg-tm electronic work and you do not
+agree to be bound by the terms of this agreement, you may obtain a
+refund from the person or entity to whom you paid the fee as set
+forth in paragraph 1.E.8.
+
+1.B.  "Project Gutenberg" is a registered trademark.  It may only be
+used on or associated in any way with an electronic work by people
+who agree to be bound by the terms of this agreement.  There are a
+few things that you can do with most Project Gutenberg-tm electronic
+works even without complying with the full terms of this agreement.
+See paragraph 1.C below.  There are a lot of things you can do with
+Project Gutenberg-tm electronic works if you follow the terms of
+this agreement and help preserve free future access to Project
+Gutenberg-tm electronic works.  See paragraph 1.E below.
+
+1.C.  The Project Gutenberg Literary Archive Foundation ("the
+Foundation" or PGLAF), owns a compilation copyright in the
+collection of Project Gutenberg-tm electronic works.  Nearly all the
+individual works in the collection are in the public domain in the
+United States.  If an individual work is in the public domain in the
+United States and you are located in the United States, we do not
+claim a right to prevent you from copying, distributing, performing,
+displaying or creating derivative works based on the work as long as
+all references to Project Gutenberg are removed.  Of course, we hope
+that you will support the Project Gutenberg-tm mission of promoting
+free access to electronic works by freely sharing Project
+Gutenberg-tm works in compliance with the terms of this agreement
+for keeping the Project Gutenberg-tm name associated with the work.
+You can easily comply with the terms of this agreement by keeping
+this work in the same format with its attached full Project
+Gutenberg-tm License when you share it without charge with others.
+
+1.D.  The copyright laws of the place where you are located also
+govern what you can do with this work.  Copyright laws in most
+countries are in a constant state of change.  If you are outside the
+United States, check the laws of your country in addition to the
+terms of this agreement before downloading, copying, displaying,
+performing, distributing or creating derivative works based on this
+work or any other Project Gutenberg-tm work.  The Foundation makes
+no representations concerning the copyright status of any work in
+any country outside the United States.
+
+1.E.  Unless you have removed all references to Project Gutenberg:
+
+1.E.1.  The following sentence, with active links to, or other
+immediate access to, the full Project Gutenberg-tm License must
+appear prominently whenever any copy of a Project Gutenberg-tm work
+(any work on which the phrase "Project Gutenberg" appears, or with
+which the phrase "Project Gutenberg" is associated) is accessed,
+displayed, performed, viewed, copied or distributed:
+
+This eBook is for the use of anyone anywhere at no cost and with
+almost no restrictions whatsoever.  You may copy it, give it away or
+re-use it under the terms of the Project Gutenberg License included
+with this eBook or online at www.gutenberg.net
+
+1.E.2.  If an individual Project Gutenberg-tm electronic work is
+derived from the public domain (does not contain a notice indicating
+that it is posted with permission of the copyright holder), the work
+can be copied and distributed to anyone in the United States without
+paying any fees or charges.  If you are redistributing or providing
+access to a work with the phrase "Project Gutenberg" associated with
+or appearing on the work, you must comply either with the
+requirements of paragraphs 1.E.1 through 1.E.7 or obtain permission
+for the use of the work and the Project Gutenberg-tm trademark as
+set forth in paragraphs 1.E.8 or 1.E.9.
+
+1.E.3.  If an individual Project Gutenberg-tm electronic work is
+posted with the permission of the copyright holder, your use and
+distribution must comply with both paragraphs 1.E.1 through 1.E.7
+and any additional terms imposed by the copyright holder.
+Additional terms will be linked to the Project Gutenberg-tm License
+for all works posted with the permission of the copyright holder
+found at the beginning of this work.
+
+1.E.4.  Do not unlink or detach or remove the full Project
+Gutenberg-tm License terms from this work, or any files containing a
+part of this work or any other work associated with Project
+Gutenberg-tm.
+
+1.E.5.  Do not copy, display, perform, distribute or redistribute
+this electronic work, or any part of this electronic work, without
+prominently displaying the sentence set forth in paragraph 1.E.1
+with active links or immediate access to the full terms of the
+Project Gutenberg-tm License.
+
+1.E.6.  You may convert to and distribute this work in any binary,
+compressed, marked up, nonproprietary or proprietary form, including
+any word processing or hypertext form.  However, if you provide
+access to or distribute copies of a Project Gutenberg-tm work in a
+format other than "Plain Vanilla ASCII" or other format used in the
+official version posted on the official Project Gutenberg-tm web
+site (www.gutenberg.net), you must, at no additional cost, fee or
+expense to the user, provide a copy, a means of exporting a copy, or
+a means of obtaining a copy upon request, of the work in its
+original "Plain Vanilla ASCII" or other form.  Any alternate format
+must include the full Project Gutenberg-tm License as specified in
+paragraph 1.E.1.
+
+1.E.7.  Do not charge a fee for access to, viewing, displaying,
+performing, copying or distributing any Project Gutenberg-tm works
+unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8.  You may charge a reasonable fee for copies of or providing
+access to or distributing Project Gutenberg-tm electronic works
+provided that
+
+- You pay a royalty fee of 20% of the gross profits you derive from
+     the use of Project Gutenberg-tm works calculated using the method
+     you already use to calculate your applicable taxes.  The fee is
+     owed to the owner of the Project Gutenberg-tm trademark, but he
+     has agreed to donate royalties under this paragraph to the
+     Project Gutenberg Literary Archive Foundation.  Royalty payments
+     must be paid within 60 days following each date on which you
+     prepare (or are legally required to prepare) your periodic tax
+     returns.  Royalty payments should be clearly marked as such and
+     sent to the Project Gutenberg Literary Archive Foundation at the
+     address specified in Section 4, "Information about donations to
+     the Project Gutenberg Literary Archive Foundation."
+
+- You provide a full refund of any money paid by a user who notifies
+     you in writing (or by e-mail) within 30 days of receipt that s/he
+     does not agree to the terms of the full Project Gutenberg-tm
+     License.  You must require such a user to return or
+     destroy all copies of the works possessed in a physical medium
+     and discontinue all use of and all access to other copies of
+     Project Gutenberg-tm works.
+
+- You provide, in accordance with paragraph 1.F.3, a full refund of
+     any money paid for a work or a replacement copy, if a defect in
+     the electronic work is discovered and reported to you within 90
+     days of receipt of the work.
+
+- You comply with all other terms of this agreement for free
+     distribution of Project Gutenberg-tm works.
+
+1.E.9.  If you wish to charge a fee or distribute a Project
+Gutenberg-tm electronic work or group of works on different terms
+than are set forth in this agreement, you must obtain permission in
+writing from both the Project Gutenberg Literary Archive Foundation
+and Michael Hart, the owner of the Project Gutenberg-tm trademark.
+Contact the Foundation as set forth in Section 3 below.
+
+1.F.
+
+1.F.1.  Project Gutenberg volunteers and employees expend
+considerable effort to identify, do copyright research on,
+transcribe and proofread public domain works in creating the Project
+Gutenberg-tm collection.  Despite these efforts, Project
+Gutenberg-tm electronic works, and the medium on which they may be
+stored, may contain "Defects," such as, but not limited to,
+incomplete, inaccurate or corrupt data, transcription errors, a
+copyright or other intellectual property infringement, a defective
+or damaged disk or other medium, a computer virus, or computer codes
+that damage or cannot be read by your equipment.
+
+1.F.2.  LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the
+"Right of Replacement or Refund" described in paragraph 1.F.3, the
+Project Gutenberg Literary Archive Foundation, the owner of the
+Project Gutenberg-tm trademark, and any other party distributing a
+Project Gutenberg-tm electronic work under this agreement, disclaim
+all liability to you for damages, costs and expenses, including
+legal fees.  YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE,
+STRICT LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT
+THOSE PROVIDED IN PARAGRAPH F3.  YOU AGREE THAT THE FOUNDATION, THE
+TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT
+BE LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL,
+PUNITIVE OR INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+1.F.3.  LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a
+defect in this electronic work within 90 days of receiving it, you
+can receive a refund of the money (if any) you paid for it by
+sending a written explanation to the person you received the work
+from.  If you received the work on a physical medium, you must
+return the medium with your written explanation.  The person or
+entity that provided you with the defective work may elect to
+provide a replacement copy in lieu of a refund.  If you received the
+work electronically, the person or entity providing it to you may
+choose to give you a second opportunity to receive the work
+electronically in lieu of a refund.  If the second copy is also
+defective, you may demand a refund in writing without further
+opportunities to fix the problem.
+
+1.F.4.  Except for the limited right of replacement or refund set
+forth in paragraph 1.F.3, this work is provided to you 'AS-IS', WITH
+NO OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
+NOT LIMITED TO WARRANTIES OF MERCHANTIBILITY OR FITNESS FOR ANY
+PURPOSE.
+
+1.F.5.  Some states do not allow disclaimers of certain implied
+warranties or the exclusion or limitation of certain types of
+damages. If any disclaimer or limitation set forth in this agreement
+violates the law of the state applicable to this agreement, the
+agreement shall be interpreted to make the maximum disclaimer or
+limitation permitted by the applicable state law.  The invalidity or
+unenforceability of any provision of this agreement shall not void
+the remaining provisions.
+
+1.F.6.  INDEMNITY - You agree to indemnify and hold the Foundation,
+the trademark owner, any agent or employee of the Foundation, anyone
+providing copies of Project Gutenberg-tm electronic works in
+accordance with this agreement, and any volunteers associated with
+the production, promotion and distribution of Project Gutenberg-tm
+electronic works, harmless from all liability, costs and expenses,
+including legal fees, that arise directly or indirectly from any of
+the following which you do or cause to occur: (a) distribution of
+this or any Project Gutenberg-tm work, (b) alteration, modification,
+or additions or deletions to any Project Gutenberg-tm work, and (c)
+any Defect you cause.
+
+
+Section  2.  Information about the Mission of Project Gutenberg-tm
+
+Project Gutenberg-tm is synonymous with the free distribution of
+electronic works in formats readable by the widest variety of
+computers including obsolete, old, middle-aged and new computers.
+It exists because of the efforts of hundreds of volunteers and
+donations from people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the
+assistance they need, is critical to reaching Project Gutenberg-tm's
+goals and ensuring that the Project Gutenberg-tm collection will
+remain freely available for generations to come.  In 2001, the
+Project Gutenberg Literary Archive Foundation was created to provide
+a secure and permanent future for Project Gutenberg-tm and future
+generations. To learn more about the Project Gutenberg Literary
+Archive Foundation and how your efforts and donations can help, see
+Sections 3 and 4 and the Foundation web page at
+http://www.pglaf.org.
+
+
+Section 3.  Information about the Project Gutenberg Literary Archive
+Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non profit
+501(c)(3) educational corporation organized under the laws of the
+state of Mississippi and granted tax exempt status by the Internal
+Revenue Service.  The Foundation's EIN or federal tax identification
+number is 64-6221541.  Its 501(c)(3) letter is posted at
+http://pglaf.org/fundraising.  Contributions to the Project
+Gutenberg Literary Archive Foundation are tax deductible to the full
+extent permitted by U.S. federal laws and your state's laws.
+
+The Foundation's principal office is located at 4557 Melan Dr. S.
+Fairbanks, AK, 99712., but its volunteers and employees are
+scattered throughout numerous locations.  Its business office is
+located at 809 North 1500 West, Salt Lake City, UT 84116, (801)
+596-1887, email business@pglaf.org.  Email contact links and up to
+date contact information can be found at the Foundation's web site
+and official page at http://pglaf.org
+
+For additional contact information:
+     Dr. Gregory B. Newby
+     Chief Executive and Director
+     gbnewby@pglaf.org
+
+Section 4.  Information about Donations to the Project Gutenberg
+Literary Archive Foundation
+
+Project Gutenberg-tm depends upon and cannot survive without wide
+spread public support and donations to carry out its mission of
+increasing the number of public domain and licensed works that can
+be freely distributed in machine readable form accessible by the
+widest array of equipment including outdated equipment.  Many small
+donations ($1 to $5,000) are particularly important to maintaining
+tax exempt status with the IRS.
+
+The Foundation is committed to complying with the laws regulating
+charities and charitable donations in all 50 states of the United
+States.  Compliance requirements are not uniform and it takes a
+considerable effort, much paperwork and many fees to meet and keep
+up with these requirements.  We do not solicit donations in
+locations where we have not received written confirmation of
+compliance.  To SEND DONATIONS or determine the status of compliance
+for any particular state visit http://pglaf.org
+
+While we cannot and do not solicit contributions from states where
+we have not met the solicitation requirements, we know of no
+prohibition against accepting unsolicited donations from donors in
+such states who approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make
+any statements concerning tax treatment of donations received from
+outside the United States.  U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg Web pages for current donation
+methods and addresses.  Donations are accepted in a number of other
+ways including including checks, online payments and credit card
+donations.  To donate, please visit: http://pglaf.org/donate
+
+
+Section 5.  General Information About Project Gutenberg-tm
+electronic works.
+
+Professor Michael S. Hart is the originator of the Project
+Gutenberg-tm concept of a library of electronic works that could be
+freely shared with anyone.  For thirty years, he produced and
+distributed Project Gutenberg-tm eBooks with only a loose network of
+volunteer support.
+
+Project Gutenberg-tm eBooks are often created from several printed
+editions, all of which are confirmed as Public Domain in the U.S.
+unless a copyright notice is included.  Thus, we do not necessarily
+keep eBooks in compliance with any particular paper edition.
+
+Most people start at our Web site which has the main PG search
+facility:
+
+     http://www.gutenberg.net
+
+This Web site includes information about Project Gutenberg-tm,
+including how to make donations to the Project Gutenberg Literary
+Archive Foundation, how to help produce our new eBooks, and how to
+subscribe to our email newsletter to hear about new eBooks.
+\end{verbatim}
+
+\end{document}
