@@ -16,6 +16,8 @@ creator:
     url: http://www.gutenberg.org/2009/agents/5958
     wikipedia: http://en.wikipedia.org/wiki/Henri_Poincaré
 description: ''
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/15267#Sechs-Vortr-ge--ber-ausgew-hlte-Gegenst-nde-aus-der-reinen--13-Mathematik-und-mathematischen-_
 gutenberg_bookshelf:
 - Physics
 - DE Sachbuch
