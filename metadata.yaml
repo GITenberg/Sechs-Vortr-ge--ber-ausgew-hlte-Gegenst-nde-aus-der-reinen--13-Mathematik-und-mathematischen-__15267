@@ -1,0 +1,44 @@
+_repo: Sechs-Vortr-ge--ber-ausgew-hlte-Gegenst-nde-aus-der-reinen--13-Mathematik-und-mathematischen-__15267
+_version: 0.1.0
+covers:
+- cover_type: generated
+  image_path: cover.png
+creator:
+  author:
+    agent_name: Poincaré, Henri
+    aliases:
+    - Poincare, Henri
+    - Poincaré, H. (Henri)
+    - Poincaré, Jules Henri
+    birthdate: 1854
+    deathdate: 1912
+    gutenberg_agent_id: '5958'
+    url: http://www.gutenberg.org/2009/agents/5958
+    wikipedia: http://en.wikipedia.org/wiki/Henri_Poincaré
+description: ''
+gutenberg_bookshelf:
+- Physics
+- DE Sachbuch
+- Mathematics
+gutenberg_issued: '2005-03-05'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '15267'
+language:
+- fr
+- de
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Mathematical physics'
+- !lcc 'QA'
+- !lcsh 'Mathematics'
+- !lcc 'QC'
+tableOfContents: Über die Fredholmschen Gleichungen -- Anwendung der Theorie der Integralgleichungen
+  auf die Flutbewegung des Meeres -- Anwendung der Integralgleichungen auf Hertzsche
+  Wellen -- Über die Reduktion der Abelschen Integrale und die Theorie der Fuchsschen
+  Funktionen -- Über transfinite Zahlen -- La mécanique nouvelle
+title: "Sechs Vorträge über ausgewählte Gegenstände aus der reinen\r\nMathematik und\
+  \ mathematischen Physik"
+url: http://www.gutenberg.org/ebooks/15267
