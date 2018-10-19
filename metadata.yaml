@@ -37,6 +37,7 @@ subjects:
 - !lcc 'QA'
 - !lcsh 'Mathematics'
 - !lcc 'QC'
+- GITenberg
 tableOfContents: Über die Fredholmschen Gleichungen -- Anwendung der Theorie der Integralgleichungen
   auf die Flutbewegung des Meeres -- Anwendung der Integralgleichungen auf Hertzsche
   Wellen -- Über die Reduktion der Abelschen Integrale und die Theorie der Fuchsschen
